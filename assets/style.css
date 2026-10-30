@@ -3474,3 +3474,16 @@ header {
     padding: 12px 5px;
   }
 }
+.brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.brand img {
+  height: 80px;
+  width: auto;
+  max-width: 190px;
+  object-fit: contain;
+  display: block;
+}
