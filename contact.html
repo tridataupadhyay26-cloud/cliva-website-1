@@ -1,10 +1,549 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Cliva India Pvt. Ltd."><title>Contact | Cliva India</title><link rel="stylesheet" href="assets/style.css"></head><body>
-<div class="top"><div class="container"><span>FSSAI Lic. No. [14-digit number] · GSTIN [15-character number]</span><span>+91 98701 77697 · sales@clivaindia.com</span></div></div>
-<header class="nav"><div class="container navin"><a class="logo" href="index.html">Cliva<small>INDIA PVT. LTD.</small></a>
-<nav class="links"><a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="manufacturing.html">Manufacturing</a><a href="quality.html">Quality</a><a href="distributor.html">Distributor</a><a href="contact.html">Contact</a><a class="btn primary" href="contact.html">Request a Quote</a></nav><button class="menu">☰</button></div></header>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Let's Talk | Cliva India</title>
+<meta name="description" content="Contact Cliva India for product enquiries, business partnerships and other enquiries.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/style.css">
+
+<style>
+*{box-sizing:border-box}
+:root{
+  --blue:#0756a5;
+  --dark:#092d50;
+  --light:#eef6ff;
+  --text:#526477;
+}
+body{font-family:'DM Sans',sans-serif;color:var(--dark);background:#fff}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,90%);margin:auto}
+
+/* HERO */
+.hero{
+  background:linear-gradient(115deg,#edf6ff 0%,#f8fbff 60%,#e5f2ff 100%);
+  padding:85px 0 80px;
+  position:relative;
+  overflow:hidden;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  width:400px;
+  height:400px;
+  border:1px solid #c9def3;
+  border-radius:50%;
+  right:-100px;
+  top:-160px;
+}
+.eyebrow{
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--blue);
+  margin-bottom:20px;
+}
+.hero h1{
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(42px,6vw,66px);
+  line-height:1.12;
+  letter-spacing:-2.5px;
+  max-width:760px;
+  margin-bottom:22px;
+}
+.hero h1 span{color:var(--blue)}
+.hero p{
+  font-size:17px;
+  line-height:1.8;
+  color:var(--text);
+  max-width:620px;
+}
+.hero-note{
+  margin-top:30px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#34536f;
+  font-size:14px;
+  font-weight:600;
+}
+.hero-note i{
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#21a36b;
+  display:inline-block;
+}
+
+/* CONTACT SECTION */
+.contact-section{padding:90px 0}
+.section-grid{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:65px;
+  align-items:start;
+}
+.section-heading{
+  font-family:'Manrope',sans-serif;
+  font-size:36px;
+  line-height:1.25;
+  letter-spacing:-1px;
+  margin-bottom:17px;
+}
+.section-desc{
+  color:var(--text);
+  font-size:15px;
+  line-height:1.8;
+  margin-bottom:35px;
+}
+.info-card{
+  display:flex;
+  gap:17px;
+  margin-bottom:27px;
+  align-items:flex-start;
+}
+.info-icon{
+  width:48px;
+  height:48px;
+  flex-shrink:0;
+  background:#edf5ff;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  color:var(--blue);
+  font-size:21px;
+}
+.info-card h4{font-size:15px;margin:2px 0 7px}
+.info-card p,.info-card a{
+  font-size:14px;
+  line-height:1.7;
+  color:var(--text);
+}
+.info-card a:hover{color:var(--blue)}
+.contact-social{
+  margin-top:35px;
+  padding-top:25px;
+  border-top:1px solid #e8eef4;
+}
+.contact-social p{
+  font-size:13px;
+  color:var(--text);
+  margin-bottom:14px;
+}
+.social-link{
+  display:inline-block;
+  background:#edf5ff;
+  color:var(--blue);
+  padding:11px 17px;
+  border-radius:7px;
+  font-size:13px;
+  font-weight:700;
+  margin-right:8px;
+  margin-bottom:8px;
+}
+
+/* FORM */
+.form-card{
+  background:#fff;
+  border:1px solid #e5edf5;
+  border-radius:17px;
+  padding:38px;
+  box-shadow:0 15px 50px rgba(20,65,105,.07);
+}
+.form-card h2{
+  font-family:'Manrope',sans-serif;
+  font-size:27px;
+  letter-spacing:-.7px;
+  margin-bottom:9px;
+}
+.form-card>p{
+  font-size:14px;
+  color:var(--text);
+  margin-bottom:28px;
+  line-height:1.6;
+}
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:19px;
+}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1/-1}
+.field label{
+  font-size:13px;
+  font-weight:700;
+  color:#263f58;
+}
+.field input,.field select,.field textarea{
+  width:100%;
+  padding:14px 15px;
+  border:1px solid #dce5ee;
+  border-radius:7px;
+  font-family:inherit;
+  font-size:14px;
+  color:#193650;
+  outline:none;
+  background:#fff;
+  transition:.2s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  border-color:var(--blue);
+  box-shadow:0 0 0 3px rgba(7,86,165,.08);
+}
+.field textarea{height:115px;resize:vertical}
+.submit-btn{
+  grid-column:1/-1;
+  border:0;
+  background:var(--blue);
+  color:#fff;
+  padding:16px 22px;
+  border-radius:7px;
+  font-size:14px;
+  font-weight:700;
+  cursor:pointer;
+  font-family:inherit;
+  transition:.2s;
+}
+.submit-btn:hover{background:#064681}
+.form-note{
+  grid-column:1/-1;
+  font-size:11px;
+  color:#8291a0;
+  line-height:1.5;
+}
+
+/* BOTTOM CTA */
+.bottom-cta{
+  background:#092e52;
+  padding:65px 0;
+  color:white;
+  text-align:center;
+}
+.bottom-cta h2{
+  font-family:'Manrope',sans-serif;
+  font-size:35px;
+  letter-spacing:-1px;
+  margin-bottom:13px;
+}
+.bottom-cta p{
+  font-size:15px;
+  color:#c7d8e9;
+  margin-bottom:25px;
+}
+.cta-btn{
+  display:inline-block;
+  background:white;
+  color:var(--blue);
+  padding:14px 25px;
+  border-radius:7px;
+  font-size:14px;
+  font-weight:800;
+}
+
+/* FOOTER */
+footer{
+  background:#061f38;
+  color:#c6d5e4;
+  padding:48px 0 22px;
+}
+.footer-top{
+  display:flex;
+  justify-content:space-between;
+  gap:35px;
+  flex-wrap:wrap;
+  padding-bottom:35px;
+}
+.footer-brand .logo{
+  color:white;
+  margin-bottom:13px;
+  display:inline-block;
+}
+.footer-brand p{
+  font-size:13px;
+  line-height:1.8;
+  max-width:320px;
+  color:#aebfd0;
+}
+.footer-col h4{
+  font-size:14px;
+  color:white;
+  margin-bottom:16px;
+}
+.footer-col a{
+  display:block;
+  font-size:13px;
+  color:#b6c7d8;
+  margin-bottom:11px;
+}
+.footer-col a:hover{color:white}
+.copyright{
+  border-top:1px solid #25415c;
+  padding-top:20px;
+  font-size:12px;
+  color:#9db0c3;
+  text-align:center;
+}
+
+/* RESPONSIVE */
+@media(max-width:850px){
+  .section-grid{grid-template-columns:1fr;gap:40px}
+}
+@media(max-width:600px){
+  .hero{padding:65px 0}
+  .hero h1{letter-spacing:-1.5px}
+  .contact-section{padding:60px 0}
+  .form-card{padding:24px 19px}
+  .form-grid{grid-template-columns:1fr}
+  .field.full,.submit-btn,.form-note{grid-column:auto}
+  .bottom-cta h2{font-size:28px}
+  .footer-top{flex-direction:column}
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-brand">
+      CLIVA INDIA PVT. LTD.
+      <span>EVERYDAY ESSENTIALS. MADE FOR EVERYDAY LIFE.</span>
+    </div>
+    <div class="topbar-contact">
+      <a href="tel:+919870177697">+91 98701 77697</a>
+      <span class="top-separator">|</span>
+      <a href="mailto:sales@clivaindia.com">sales@clivaindia.com</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html" aria-label="Cliva India home">
+      <span class="brand-name">cliva<span class="brand-dot">.</span></span>
+      <span class="brand-sub">INDIA PVT. LTD.</span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="products.html">Products</a>
+      <a href="manufacturing.html">Manufacturing</a>
+      <a href="quality.html">Quality</a>
+      <a href="distributor.html">Distribution</a>
+      <a class="nav-cta active" href="contact.html">Let's Talk <span>↗</span></a>
+      <a class="nav-whatsapp" href="https://wa.me/919870177697" target="_blank" rel="noopener noreferrer" aria-label="Chat with Cliva on WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .2 5.3.2 11.9c0 2.1.6 4.2 1.6 6L0 24l6.3-1.7a12 12 0 0 0 5.8 1.5h.1c6.5 0 11.8-5.3 11.8-11.9 0-3.1-1.2-6.1-3.5-8.4ZM12.1 21.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.3-.4a9.8 9.8 0 0 1-1.5-5.3c0-5.5 4.5-10 10-10a9.9 9.9 0 0 1 7.1 2.9 10 10 0 0 1 2.9 7.1c0 5.4-4.5 9.9-10 9.9Zm5.5-7.5c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7l.5-.5c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2.2 3.4 5.3 4.7.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4Z"/>
+        </svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
 <main>
-<section class="pagehero"><div class="container hero-inner"><div class="kicker">CONTACT</div><h1>Tell us what you need. We’ll send a quote.</h1><p>Pick a category and quantity and our sales team will reply within [XX] working hours with pricing and delivery timelines.</p></div></section>
-<section class="section"><div class="container grid2" style="align-items:start"><form class="form"><input placeholder="Your name"><input placeholder="Company"><input placeholder="Mobile number"><input placeholder="Email"><select><option>Product category</option><option>Packaged Water</option><option>Cold Drinks</option><option>Namkeen & Snacks</option><option>Spices</option><option>Cookies</option><option>Home & Hygiene</option></select><input placeholder="Approx. quantity per month"><input placeholder="Delivery city"><textarea placeholder="Notes / requirement"></textarea><button class="btn primary" type="submit">Send enquiry →</button></form><div><div class="kicker">CLIVA INDIA PVT. LTD.</div><h2>Let's build a reliable supply relationship.</h2><p style="color:var(--muted);margin:18px 0 28px">For product enquiries, bulk supply, distributor opportunities and applicable manufacturing requirements.</p><div class="card"><h3>Headquarters</h3><p>213/214, 2nd Floor, Well Done Tech Park, Sohna Road, Sector 48, Gurugram, Haryana 122001</p><p style="margin-top:15px"><strong>Phone:</strong> +91 98701 77697<br><strong>Email:</strong> sales@clivaindia.com</p><a class="btn primary" style="margin-top:18px" href="https://wa.me/919870177697">Chat on WhatsApp</a></div></div></div></section>
+
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">LET'S CONNECT</div>
+    <h1>Good conversations<br>start with <span>Hello.</span></h1>
+    <p>Have a business enquiry, partnership opportunity or simply want to know more about Cliva? We'd love to hear from you. Let's start a conversation.</p>
+    <div class="hero-note"><i></i> We're just a message away.</div>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="container section-grid">
+
+    <div>
+      <div class="eyebrow">GET IN TOUCH</div>
+      <h2 class="section-heading">Let's make something meaningful together.</h2>
+      <p class="section-desc">Whether you're looking for products, exploring a business partnership or have a general enquiry, connect with our team.</p>
+
+      <div class="info-card">
+        <div class="info-icon">☎</div>
+        <div>
+          <h4>Call Us</h4>
+          <a href="tel:+919870177697">+91 98701 77697</a>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">✉</div>
+        <div>
+          <h4>Email Us</h4>
+          <a href="mailto:sales@clivaindia.com">sales@clivaindia.com</a>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">⌖</div>
+        <div>
+          <h4>Visit Us</h4>
+          <p>213/214, 2nd Floor, Well Done Tech Park,<br>
+          Sohna Road, Sector 48, Gurugram,<br>
+          Haryana 122001, India</p>
+        </div>
+      </div>
+
+      <div class="contact-social">
+        <p>Prefer a quick conversation?</p>
+        <a class="social-link" href="https://wa.me/919870177697" target="_blank" rel="noopener noreferrer">WhatsApp Us ↗</a>
+        <a class="social-link" href="mailto:sales@clivaindia.com">Email Us ↗</a>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h2>Send us an enquiry</h2>
+      <p>Share a few details and our team can get back to you.</p>
+
+      <form id="contactForm" class="form-grid">
+        <div class="field">
+          <label for="name">Your Name *</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="field">
+          <label for="company">Company Name</label>
+          <input type="text" id="company" placeholder="Your company">
+        </div>
+
+        <div class="field">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" placeholder="Enter phone number" required>
+        </div>
+
+        <div class="field full">
+          <label for="type">Enquiry Type *</label>
+          <select id="type" required>
+            <option value="">Select enquiry type</option>
+            <option>Product Enquiry</option>
+            <option>Distribution / Partnership</option>
+            <option>Bulk / Institutional Order</option>
+            <option>General Enquiry</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="field full">
+          <label for="message">Your Message *</label>
+          <textarea id="message" placeholder="Tell us how we can help..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Enquiry →</button>
+        <div class="form-note">By submitting, you agree to be contacted by the Cliva team regarding your enquiry.</div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<section class="bottom-cta">
+  <div class="container">
+    <h2>Have something in mind?</h2>
+    <p>Let's connect and explore how we can work together.</p>
+    <a href="https://wa.me/919870177697" target="_blank" rel="noopener noreferrer" class="cta-btn">Start a Conversation ↗</a>
+  </div>
+</section>
+
 </main>
-<footer><div class="container"><div class="foot"><div><a class="logo" href="index.html" style="color:#9ad5c6">Cliva<small style="color:#789087">INDIA PVT. LTD.</small></a><p style="font-size:13px;margin-top:18px">Cliva India Pvt. Ltd. makes packaged water, cold drinks, snacks, spices, cookies and home hygiene products for homes, retailers and businesses.</p></div><div><h4>Company</h4><a href="about.html">About us</a><a href="manufacturing.html">Manufacturing</a><a href="quality.html">Quality</a></div><div><h4>Products</h4><a href="products.html">Packaged water</a><a href="products.html">Cold drinks</a><a href="products.html">Namkeen & snacks</a><a href="products.html">Spices</a></div><div><h4>Contact</h4><p style="font-size:13px">213/214, 2nd Floor, Well Done Tech Park, Sohna Road, Sector 48, Gurugram, Haryana 122001</p><p style="font-size:13px;margin-top:10px">+91 98701 77697<br>sales@clivaindia.com</p></div></div><div class="copy"><span>© 2026 Cliva India Pvt. Ltd. All rights reserved.</span><span>Privacy Policy · Terms · LinkedIn · Instagram · YouTube</span></div></div></footer>
-</body></html>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">CLIVA.</a>
+        <p>Everyday essentials. Made for everyday life. Connect with Cliva for product and business enquiries.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Our Products</a>
+        <a href="manufacturing.html">Manufacturing</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="quality.html">Quality</a>
+        <a href="distributor.html">Distribution</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+919870177697">+91 98701 77697</a>
+        <a href="mailto:sales@clivaindia.com">sales@clivaindia.com</a>
+      </div>
+    </div>
+
+    <div class="copyright">© 2026 Cliva India. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script>
+const menuButton = document.querySelector(".menu-toggle");
+const navigation = document.querySelector(".nav-links");
+
+if (menuButton && navigation) {
+  menuButton.addEventListener("click", () => {
+    const isOpen = navigation.classList.toggle("is-open");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  navigation.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navigation.classList.remove("is-open");
+      menuButton.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const company = document.getElementById("company").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const type = document.getElementById("type").value;
+  const message = document.getElementById("message").value.trim();
+
+  const text = `Hello Cliva Team,
+
+I would like to make an enquiry.
+
+Name: ${name}
+Company: ${company || "Not provided"}
+Email: ${email}
+Phone: ${phone}
+Enquiry Type: ${type}
+
+Message: ${message}`;
+
+  const whatsappURL = "https://wa.me/919870177697?text=" + encodeURIComponent(text);
+  window.open(whatsappURL, "_blank");
+});
+</script>
+
+</body>
+</html>

@@ -2240,3 +2240,1237 @@ h1, h2, h3, h4 {
     animation: none;
   }
 }
+/* PREMIUM ABOUT CLIVA SECTION */
+
+.about-cliva {
+  background: #f3f5ef;
+  padding: 110px 0 35px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-cliva-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.about-eyebrow {
+  color: #64806b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.about-left h2 {
+  font-size: clamp(42px, 5.5vw, 76px);
+  line-height: 1.08;
+  letter-spacing: -3px;
+  color: #172d25;
+  font-weight: 600;
+  margin: 30px 0;
+}
+
+.about-left h2 span {
+  display: block;
+  color: #77947a;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.about-decoration {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #6c7d70;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.about-decoration span {
+  width: 42px;
+  height: 1px;
+  background: #77947a;
+}
+
+.about-right {
+  padding: 20px 0;
+}
+
+.about-number {
+  color: #77947a;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.about-intro {
+  font-size: 25px;
+  line-height: 1.45;
+  color: #233d30;
+  font-weight: 500;
+  margin: 30px 0 20px;
+}
+
+.about-description {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #68746c;
+  margin-bottom: 35px;
+}
+
+.about-link {
+  display: inline-flex;
+  gap: 35px;
+  align-items: center;
+  color: #203c2e;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  border-bottom: 1px solid #8da28f;
+  padding-bottom: 13px;
+}
+
+.about-link span {
+  font-size: 19px;
+}
+
+.about-bottom-text {
+  border-top: 1px solid #dce3d9;
+  margin-top: 85px;
+  padding-top: 25px;
+  text-align: center;
+  color: #829184;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 768px) {
+  .about-cliva {
+    padding: 70px 0 25px;
+  }
+
+  .about-cliva-inner {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .about-left h2 {
+    font-size: 45px;
+    letter-spacing: -2px;
+  }
+
+  .about-intro {
+    font-size: 21px;
+  }
+
+  .about-bottom-text {
+    margin-top: 45px;
+    line-height: 2;
+  }
+}
+
+
+/* ===== CLIVA ABOUT SECTION ===== */
+
+.cliva-about {
+  padding: 100px 7%;
+  background: #f5f8f7;
+  overflow: hidden;
+}
+
+.cliva-about-container {
+  max-width: 1250px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 65px;
+}
+
+/* LEFT CONTENT */
+
+.cliva-about-content {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.cliva-tag {
+  display: inline-block;
+  color: #07816b;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  margin-bottom: 20px;
+}
+
+.cliva-about-content h2 {
+  color: #142c28;
+  font-size: clamp(36px, 4vw, 52px);
+  line-height: 1.13;
+  letter-spacing: -1.5px;
+  margin: 0 0 25px;
+  font-weight: 750;
+}
+
+.cliva-about-content h2 span {
+  color: #07816b;
+  display: block;
+}
+
+.cliva-about-content p {
+  color: #596963;
+  font-size: 15px;
+  line-height: 1.9;
+  margin: 0 0 17px;
+}
+
+.cliva-about-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15px;
+  padding: 16px 25px;
+  background: #087c68;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.cliva-about-btn:hover {
+  background: #145348;
+  transform: translateY(-3px);
+}
+
+.cliva-about-btn span {
+  font-size: 18px;
+}
+
+/* RIGHT IMAGE */
+
+.cliva-about-image {
+  grid-column: 2;
+  grid-row: 1;
+  position: relative;
+  min-height: 560px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #e8f0ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cliva-about-image img {
+  width: 100%;
+  height: 560px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  padding: 15px;
+}
+
+.cliva-image-label {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+}
+
+.cliva-image-label span {
+  color: #087c68;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.cliva-image-label p {
+  margin: 8px 0 0;
+  color: #172d29;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .cliva-about {
+    padding: 65px 6%;
+  }
+
+  .cliva-about-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .cliva-about-content,
+  .cliva-about-image {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .cliva-about-image,
+  .cliva-about-image img {
+    min-height: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 520px) {
+  .cliva-about-content h2 {
+    font-size: 35px;
+  }
+
+  .cliva-about-content p {
+    font-size: 14px;
+  }
+
+  .cliva-about-image,
+  .cliva-about-image img {
+    min-height: 330px;
+    height: 330px;
+  }
+}
+
+/* =====================================
+   CLIVA INDIA - BLUE & WHITE THEME
+===================================== */
+
+:root {
+  --primary-blue: #123F70;
+  --secondary-blue: #1688D4;
+  --light-blue: #EAF5FC;
+  --white: #FFFFFF;
+  --dark-text: #172B3A;
+  --grey-text: #64748B;
+}
+
+/* GLOBAL */
+body {
+  background: var(--white);
+  color: var(--dark-text);
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--primary-blue);
+}
+
+p {
+  color: var(--grey-text);
+}
+
+/* HEADER & NAVIGATION */
+header,
+.site-header,
+.navbar {
+  background: var(--white);
+}
+
+.nav-links a,
+.nav-inner a {
+  color: var(--primary-blue);
+}
+
+.nav-links a:hover,
+.nav-inner a:hover {
+  color: var(--secondary-blue);
+}
+
+/* PRIMARY BUTTONS */
+button,
+.btn,
+.btn-primary,
+.nav-cta,
+.hero-btn {
+  background: var(--primary-blue);
+  color: var(--white);
+  border: 1px solid var(--primary-blue);
+  transition: all 0.3s ease;
+}
+
+button:hover,
+.btn:hover,
+.btn-primary:hover,
+.nav-cta:hover,
+.hero-btn:hover {
+  background: var(--secondary-blue);
+  border-color: var(--secondary-blue);
+  color: var(--white);
+}
+
+/* HERO SECTION */
+.hero {
+  background-color: var(--primary-blue);
+}
+
+.hero h1,
+.hero h2,
+.hero p {
+  color: var(--white);
+}
+
+/* SECTION BACKGROUNDS */
+.about-cliva,
+.cliva-about,
+.welcome-section,
+.products-section,
+.quality-section {
+  background-color: var(--white);
+}
+
+/* PRODUCT CARDS */
+.product-card,
+.category-card {
+  background: var(--white);
+  border: 1px solid #E1EDF5;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(18, 63, 112, 0.08);
+  transition: all 0.3s ease;
+}
+
+.product-card:hover,
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(18, 63, 112, 0.15);
+}
+
+/* LIGHT BLUE SECTIONS */
+.cta-section,
+.highlight-section,
+.stats-section {
+  background: var(--light-blue);
+}
+
+/* LINKS */
+a {
+  color: var(--secondary-blue);
+}
+
+a:hover {
+  color: var(--primary-blue);
+}
+
+/* FOOTER */
+footer,
+.site-footer {
+  background: var(--primary-blue);
+  color: var(--white);
+}
+
+footer h2,
+footer h3,
+footer h4,
+footer p,
+footer a,
+.site-footer h2,
+.site-footer h3,
+.site-footer p,
+.site-footer a {
+  color: var(--white);
+}
+
+footer a:hover,
+.site-footer a:hover {
+  color: #8ED0FF;
+}
+
+/* FORM FIELDS */
+input,
+textarea,
+select {
+  border: 1px solid #D5E5F1;
+  border-radius: 8px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--secondary-blue);
+  box-shadow: 0 0 0 3px rgba(22, 136, 212, 0.12);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .product-card,
+  .category-card {
+    border-radius: 12px;
+  }
+}
+
+/* =========================================
+   CLIVA INDIA - FINAL PREMIUM BLUE & WHITE
+========================================= */
+
+:root {
+  --ink: #123F70;
+  --green: #123F70;
+  --mint: #DCEEFF;
+  --cream: #FFFFFF;
+  --muted: #64748B;
+  --line: #DCE8F2;
+  --white: #FFFFFF;
+  --orange: #1688D4;
+}
+
+/* GLOBAL */
+body {
+  background: #FFFFFF !important;
+  color: #172B3A !important;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #123F70;
+}
+
+/* HEADER */
+.topbar {
+  background: #123F70 !important;
+  color: #FFFFFF;
+}
+
+.site-header {
+  background: #FFFFFF !important;
+  border-bottom: 1px solid #DCE8F2;
+}
+
+.brand-dot,
+.mini-brand span,
+.pack-brand span,
+.can-brand span,
+.snack-brand span,
+.spice-brand span,
+.cookie-brand span,
+.home-brand span {
+  color: #1688D4 !important;
+}
+
+.nav-links > a:not(.nav-cta):not(.nav-whatsapp),
+.nav-inner a {
+  color: #123F70;
+}
+
+.nav-links > a:hover,
+.nav-links > a.active {
+  color: #1688D4 !important;
+}
+
+.nav-cta {
+  background: #123F70 !important;
+  color: #FFFFFF !important;
+  border-color: #123F70 !important;
+}
+
+.nav-cta:hover {
+  background: #1688D4 !important;
+}
+
+.nav-whatsapp {
+  background: #EAF5FC !important;
+  color: #123F70 !important;
+  border-color: #D5E8F6 !important;
+}
+
+/* HERO */
+.hero {
+  background-color: #FFFFFF !important;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.96) 0%,
+      rgba(255,255,255,.83) 42%,
+      rgba(234,245,252,.22) 100%
+    ),
+    url("../images/cliva-products-banner.png") !important;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1,
+.hero h2 {
+  color: #123F70 !important;
+}
+
+.hero h1 span {
+  color: #1688D4 !important;
+}
+
+.hero-description,
+.hero-note {
+  color: #52677C !important;
+}
+
+.eyebrow {
+  color: #1688D4 !important;
+  background: #EAF5FC !important;
+}
+
+.eyebrow-dot {
+  background: #1688D4 !important;
+}
+
+.button-dark,
+.welcome-button,
+.cliva-about-btn {
+  background: #123F70 !important;
+  color: #FFFFFF !important;
+}
+
+.button-dark:hover,
+.welcome-button:hover,
+.cliva-about-btn:hover {
+  background: #1688D4 !important;
+}
+
+.button-light {
+  color: #123F70 !important;
+  border-color: #B8D4E9 !important;
+}
+
+.hero-bottom {
+  background: #EAF5FC !important;
+}
+
+.hero-bottom-inner {
+  color: #123F70 !important;
+}
+
+/* ABOUT SECTION */
+.about-cliva,
+.cliva-about {
+  background: #F5FAFE !important;
+}
+
+.about-left h2,
+.cliva-about-content h2 {
+  color: #123F70 !important;
+}
+
+.about-left h2 span,
+.cliva-about-content h2 span {
+  color: #1688D4 !important;
+}
+
+.about-eyebrow,
+.about-number,
+.cliva-tag {
+  color: #1688D4 !important;
+}
+
+.about-intro {
+  color: #123F70 !important;
+}
+
+.about-description,
+.cliva-about-content p {
+  color: #64748B !important;
+}
+
+.about-link {
+  color: #123F70 !important;
+  border-color: #1688D4 !important;
+}
+
+.cliva-about-image {
+  background: #EAF5FC !important;
+}
+
+/* WELCOME SECTION */
+.welcome-section {
+  background: linear-gradient(135deg, #FFFFFF, #EAF5FC) !important;
+}
+
+.welcome-label {
+  color: #1688D4 !important;
+}
+
+.welcome-dot {
+  background: #1688D4 !important;
+}
+
+.welcome-section h2 {
+  color: #123F70 !important;
+}
+
+.welcome-section h2 span {
+  color: #1688D4 !important;
+}
+
+.welcome-line {
+  background: #1688D4 !important;
+}
+
+.welcome-section p {
+  color: #64748B !important;
+}
+
+/* PRODUCT COLLECTION */
+.products-section,
+.product-marquee-section,
+.welcome-product-strip {
+  background: #F5FAFE !important;
+}
+
+.products-section .section-label,
+.marquee-heading > span {
+  color: #1688D4 !important;
+}
+
+.products-section .section-heading h2,
+.marquee-heading p {
+  color: #123F70 !important;
+}
+
+.products-section .section-heading h2 span {
+  color: #1688D4 !important;
+}
+
+.category-card {
+  background: #FFFFFF !important;
+  border-color: #DCE8F2 !important;
+  box-shadow: 0 8px 25px rgba(18,63,112,.07);
+}
+
+.category-card:hover {
+  box-shadow: 0 15px 35px rgba(18,63,112,.13);
+}
+
+.category-water .category-visual,
+.category-drinks .category-visual,
+.category-snacks .category-visual,
+.category-spices .category-visual,
+.category-cookies .category-visual,
+.category-home .category-visual {
+  background: linear-gradient(145deg, #EAF5FC, #FFFFFF) !important;
+}
+
+.category-info h3 {
+  color: #123F70 !important;
+}
+
+.category-overline {
+  color: #64819B !important;
+}
+
+.card-arrow {
+  color: #1688D4 !important;
+  border-color: #DCE8F2 !important;
+}
+
+.category-card:hover .card-arrow {
+  background: #123F70 !important;
+  color: #FFFFFF !important;
+}
+
+/* BUSINESS / GROW SECTION */
+.business-section,
+.grow-section {
+  background: #123F70 !important;
+}
+
+.business-copy h2,
+.grow-content h2 {
+  color: #FFFFFF !important;
+}
+
+.business-copy h2 span,
+.grow-content h2 span {
+  color: #8ED0FF !important;
+}
+
+.business-copy p,
+.business-option small,
+.grow-content > p,
+.grow-card-content p {
+  color: #D6E7F5 !important;
+}
+
+.light-label,
+.grow-label,
+.option-number,
+.grow-number {
+  color: #8ED0FF !important;
+}
+
+.button-white,
+.grow-button {
+  background: #FFFFFF !important;
+  color: #123F70 !important;
+}
+
+.button-white:hover,
+.grow-button:hover {
+  background: #DCEEFF !important;
+}
+
+/* CLOSING CTA */
+.closing-section {
+  background: #EAF5FC !important;
+}
+
+.closing-inner h2 {
+  color: #123F70 !important;
+}
+
+.closing-inner h2 span {
+  color: #1688D4 !important;
+}
+
+.closing-inner p {
+  color: #64748B !important;
+}
+
+/* FOOTER */
+.site-footer {
+  background: #0B2E50 !important;
+  color: #FFFFFF !important;
+}
+
+.site-footer h2,
+.site-footer h3,
+.site-footer h4,
+.site-footer p,
+.site-footer a {
+  color: #FFFFFF !important;
+}
+
+.site-footer a:hover {
+  color: #8ED0FF !important;
+}
+
+.footer-brand .brand-name {
+  color: #FFFFFF !important;
+}
+
+.footer-brand .brand-sub {
+  color: #D6E7F5 !important;
+}
+
+/* LINKS & FORMS */
+a {
+  text-decoration-color: #1688D4;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #1688D4 !important;
+  box-shadow: 0 0 0 3px rgba(22,136,212,.12) !important;
+}
+
+/* MOBILE MENU */
+.menu-toggle span {
+  background: #123F70 !important;
+}
+
+.nav-links.is-open {
+  background: #FFFFFF !important;
+}
+/* BUSINESS PRESENCE */
+
+.about-stats {
+  background: #123f70;
+  padding: 85px 0;
+}
+
+.about-presence-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 45px;
+}
+
+.about-presence-heading .about-label {
+  color: #8bcdf5;
+}
+
+.about-presence-heading h2 {
+  color: #fff;
+  font-size: clamp(32px, 4vw, 48px);
+  margin: 15px 0;
+  letter-spacing: -1px;
+}
+
+.about-presence-heading h2 span {
+  color: #65baf0;
+}
+
+.about-presence-heading p {
+  color: #c9ddec;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.about-stat {
+  min-height: 135px;
+  padding: 25px 18px;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 9px;
+  background: rgba(255,255,255,.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: .3s;
+}
+
+.about-stat:hover {
+  background: rgba(255,255,255,.13);
+  transform: translateY(-5px);
+  border-color: #65baf0;
+}
+
+.about-stat strong {
+  display: block;
+  color: #fff;
+  font-size: clamp(27px, 3vw, 39px);
+  letter-spacing: -1px;
+}
+
+.about-stat span {
+  display: block;
+  color: #c9e4f7;
+  font-size: 12px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+@media(max-width:850px) {
+  .about-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width:600px) {
+  .about-stats {
+    padding: 65px 0;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .about-stat {
+    min-height: 115px;
+    padding: 18px 10px;
+  }
+
+  .about-stat strong {
+    font-size: 27px;
+  }
+}
+/* COMMON HEADER ALIGNMENT FIX */
+
+header {
+    width: 100%;
+    background: #fff;
+}
+
+.nav, .navbar, .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.nav-links a {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.nav-btn {
+    flex-shrink: 0;
+}
+
+@media (max-width: 1050px) {
+    .nav-links {
+        gap: 13px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+}
+
+/* ===== CLIVA PREMIUM COMMON HEADER ===== */
+
+.site-header,
+.site-header * {
+  box-sizing: border-box;
+}
+
+.topbar {
+  width: 100%;
+  background: #063d78;
+  color: #fff;
+}
+
+.topbar-inner {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.topbar-brand {
+  color: #fff;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.topbar-brand span {
+  display: block;
+  margin-top: 5px;
+  color: #d6e9ff;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.topbar-contact {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.topbar-contact a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.top-separator {
+  color: #9fc5eb;
+}
+
+.site-header {
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(10, 45, 80, .07);
+}
+
+.site-header .nav-inner {
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.site-header .brand {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  text-decoration: none;
+  line-height: 1.1;
+}
+
+.site-header .brand-name {
+  color: #0756a5;
+  font-size: 38px;
+  font-weight: 800;
+}
+
+.site-header .brand-dot {
+  color: #159b61;
+}
+
+.site-header .brand-sub {
+  color: #526b83;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.site-header .menu-toggle {
+  display: none;
+}
+
+.site-header .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 23px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header .nav-links > a {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  color: #183b5a;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.site-header .nav-links > a:hover,
+.site-header .nav-links > a.active {
+  color: #0756a5;
+}
+
+.site-header .nav-links .nav-cta {
+  padding: 13px 19px;
+  border-radius: 6px;
+  background: #0756a5;
+  color: #fff;
+  font-weight: 700;
+}
+
+.site-header .nav-links .nav-cta:hover {
+  background: #063d78;
+  color: #fff;
+}
+
+.site-header .nav-links .nav-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.site-header .nav-whatsapp svg {
+  display: block;
+  width: 27px;
+  height: 27px;
+  fill: #16a34a;
+}
+
+/* Tablet */
+@media (max-width: 1050px) {
+  .site-header .nav-inner {
+    gap: 14px;
+  }
+
+  .site-header .nav-links {
+    gap: 12px;
+  }
+
+  .site-header .nav-links > a {
+    font-size: 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .topbar-inner {
+    min-height: auto;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .topbar-brand {
+    font-size: 19px;
+  }
+
+  .topbar-contact {
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .site-header .nav-inner {
+    min-height: 76px;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 10px;
+  }
+
+  .site-header .brand-name {
+    font-size: 33px;
+  }
+
+  .site-header .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    margin-left: auto;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .site-header .menu-toggle span {
+    width: 25px;
+    height: 2px;
+    background: #0756a5;
+  }
+
+  .site-header .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    flex-basis: 100%;
+    width: 100%;
+    gap: 0;
+  }
+
+  .site-header .nav-links.is-open {
+    display: flex;
+  }
+
+  .site-header .nav-links > a {
+    width: 100%;
+    padding: 13px 5px;
+    font-size: 14px;
+  }
+
+  .site-header .nav-links .nav-cta {
+    justify-content: center;
+    margin-top: 8px;
+  }
+
+  .site-header .nav-links .nav-whatsapp {
+    justify-content: flex-start;
+    padding: 12px 5px;
+  }
+}

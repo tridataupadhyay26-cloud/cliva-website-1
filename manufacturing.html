@@ -1,11 +1,541 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Cliva India Pvt. Ltd."><title>Manufacturing | Cliva India</title><link rel="stylesheet" href="assets/style.css"></head><body>
-<div class="top"><div class="container"><span>FSSAI Lic. No. [14-digit number] · GSTIN [15-character number]</span><span>+91 98701 77697 · sales@clivaindia.com</span></div></div>
-<header class="nav"><div class="container navin"><a class="logo" href="index.html">Cliva<small>INDIA PVT. LTD.</small></a>
-<nav class="links"><a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="manufacturing.html">Manufacturing</a><a href="quality.html">Quality</a><a href="distributor.html">Distributor</a><a href="contact.html">Contact</a><a class="btn primary" href="contact.html">Request a Quote</a></nav><button class="menu">☰</button></div></header>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manufacturing | Cliva India</title>
+<meta name="description" content="Explore the manufacturing journey and key operational stages at Cliva India.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- COMMON WEBSITE CSS -->
+<link rel="stylesheet" href="assets/style.css">
+
+<style>
+:root{
+  --blue:#0755a5;
+  --dark:#102d4b;
+  --text:#62758a;
+  --light:#f3f8fd;
+  --border:#e4edf5;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--dark);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.container{width:90%;max-width:1200px;margin:auto}
+
+/* HERO */
+.hero{
+  background:linear-gradient(115deg,#e9f3ff 0%,#f7fbff 65%,#e6f2ff 100%);
+  padding:105px 0 100px;
+  position:relative;
+  overflow:hidden;
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  width:480px;height:480px;
+  border:1px solid #0755a51a;
+  border-radius:50%;
+  right:-100px;top:-160px;
+  box-shadow:0 0 0 55px #0755a506,0 0 0 110px #0755a504;
+}
+.hero-content{max-width:790px;position:relative;z-index:1}
+.eyebrow{
+  font-size:11px;font-weight:800;letter-spacing:2.5px;
+  text-transform:uppercase;color:var(--blue);
+  margin-bottom:19px;
+}
+.hero h1{
+  font-family:Manrope,sans-serif;
+  font-size:clamp(42px,6vw,70px);
+  line-height:1.12;letter-spacing:-2.8px;
+  margin-bottom:23px;
+}
+.hero h1 span{color:var(--blue)}
+.hero p{font-size:16px;line-height:1.9;color:var(--text);max-width:650px}
+.btn{
+  display:inline-block;padding:15px 24px;border-radius:5px;
+  font-size:13px;font-weight:800;margin:28px 10px 0 0;
+  transition:.25s;
+}
+.btn-primary{background:var(--blue);color:white}
+.btn-primary:hover{background:#063f7a;transform:translateY(-2px)}
+.btn-outline{border:1px solid #cbdbea;background:#fff;color:var(--dark)}
+.btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+
+/* INTRO */
+.intro{padding:85px 0}
+.intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:65px;align-items:center}
+.intro h2{
+  font-family:Manrope,sans-serif;font-size:clamp(30px,4vw,43px);
+  line-height:1.25;letter-spacing:-1.3px;margin-bottom:20px;
+}
+.intro p{font-size:14px;line-height:2;color:var(--text)}
+.intro-highlight{
+  padding:36px;background:var(--light);
+  border-radius:12px;border-left:4px solid var(--blue);
+}
+.intro-highlight .number{font-size:48px;font-weight:800;color:var(--blue);font-family:Manrope}
+.intro-highlight h3{font-size:20px;margin:8px 0 12px}
+.intro-highlight p{font-size:13px}
+
+/* PROCESS */
+.process-section{padding:90px 0;background:#f5f9fd}
+.section-heading{text-align:center;max-width:710px;margin:0 auto 55px}
+.section-heading h2{
+  font-family:Manrope,sans-serif;
+  font-size:clamp(30px,4vw,45px);
+  letter-spacing:-1.5px;margin-bottom:15px;
+}
+.section-heading p{font-size:14px;color:var(--text);line-height:1.9}
+
+/* STAGE CARDS */
+.stage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}
+.stage-card{
+  background:#fff;border:1px solid var(--border);
+  border-radius:10px;padding:28px 25px;
+  position:relative;overflow:hidden;transition:.3s;
+}
+.stage-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px #102d4b12;
+  border-color:#c6dbee;
+}
+.stage-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:23px}
+.stage-no{font-size:12px;letter-spacing:1.8px;font-weight:800;color:var(--blue)}
+.stage-line{height:2px;width:45px;background:#d7e8f8}
+.stage-card h3{font-family:Manrope,sans-serif;font-size:18px;margin-bottom:11px}
+.stage-card p{font-size:13px;color:var(--text);line-height:1.85}
+.stage-card:after{
+  content:"";position:absolute;bottom:0;left:0;
+  width:0;height:3px;background:var(--blue);transition:.3s;
+}
+.stage-card:hover:after{width:100%}
+
+/* VIDEO SECTION */
+.video-section{padding:95px 0}
+.video-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.video-card{
+  background:#fff;border:1px solid var(--border);
+  border-radius:12px;overflow:hidden;
+  box-shadow:0 10px 30px #102d4b08;
+}
+.video-frame{
+  width:100%;aspect-ratio:16/9;
+  background:#e7f0f9;overflow:hidden;
+}
+.video-frame video{
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+.video-info{padding:25px 27px}
+.video-label{
+  color:var(--blue);font-size:10px;font-weight:800;
+  letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;
+}
+.video-info h3{font-family:Manrope,sans-serif;font-size:21px;margin-bottom:9px}
+.video-info p{font-size:13px;color:var(--text);line-height:1.8}
+
+/* QUALITY */
+.quality-section{padding:85px 0;background:var(--light)}
+.quality-box{
+  background:#fff;border-radius:14px;padding:48px;
+  display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center;
+}
+.quality-box h2{
+  font-family:Manrope,sans-serif;font-size:35px;
+  line-height:1.3;margin-bottom:17px;
+}
+.quality-box p{font-size:14px;color:var(--text);line-height:1.9}
+.quality-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.quality-item{
+  background:#f2f7fc;border:1px solid #e8f0f8;
+  padding:17px 13px;border-radius:7px;
+  font-size:12px;font-weight:700;color:#24486d;
+}
+.quality-item span{color:var(--blue);margin-right:7px}
+
+/* CTA */
+.cta{
+  background:linear-gradient(115deg,#073e79,#0871c9);
+  padding:85px 0;text-align:center;color:white;
+}
+.cta .eyebrow{color:#bcdfff}
+.cta h2{font-family:Manrope,sans-serif;font-size:clamp(29px,4vw,43px);margin-bottom:15px}
+.cta p{color:#e0edfc;max-width:650px;margin:auto;font-size:14px;line-height:1.9}
+.cta .btn{background:white;color:var(--blue)}
+.cta .btn:hover{transform:translateY(-3px)}
+
+/* FOOTER */
+footer{background:#102943;color:white;padding:60px 0 22px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:45px;padding-bottom:35px}
+.footer-brand{font-size:30px;font-weight:800;margin-bottom:15px}
+.footer-brand span{color:#72b8ff}
+footer p,footer a{color:#bdcddd;font-size:13px;line-height:1.9}
+footer h4{font-size:15px;margin-bottom:16px}
+.footer-links{display:flex;flex-direction:column;gap:7px}
+footer a:hover{color:white}
+.footer-bottom{
+  border-top:1px solid #ffffff22;padding-top:20px;
+  display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;
+}
+
+/* FLOATING WHATSAPP */
+.whatsapp{
+  position:fixed;right:22px;bottom:22px;
+  width:54px;height:54px;background:#20bd65;color:#fff;
+  border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-size:25px;z-index:100;
+  box-shadow:0 5px 20px #0002;
+}
+
+/* RESPONSIVE CONTENT */
+@media(max-width:950px){
+  .stage-grid{grid-template-columns:repeat(2,1fr)}
+  .intro-grid,.quality-box{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .hero{padding:75px 0}
+  .hero h1{letter-spacing:-1.5px}
+  .intro,.process-section,.video-section{padding:65px 0}
+  .intro-grid{gap:30px}
+  .stage-grid,.video-grid{grid-template-columns:1fr}
+  .quality-section{padding:60px 0}
+  .quality-box{padding:28px 22px;gap:28px}
+  .quality-box h2{font-size:29px}
+  .quality-list{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr;gap:28px}
+  .footer-bottom{flex-direction:column}
+}
+</style>
+</head>
+
+<body>
+
+<!-- COMMON CLIVA HEADER -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-brand">
+      CLIVA INDIA PVT. LTD.
+      <span>EVERYDAY ESSENTIALS. MADE FOR EVERYDAY LIFE.</span>
+    </div>
+    <div class="topbar-contact">
+      <a href="tel:+919870177697">+91 98701 77697</a>
+      <span class="top-separator">|</span>
+      <a href="mailto:sales@clivaindia.com">sales@clivaindia.com</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html" aria-label="Cliva India home">
+      <span class="brand-name">cliva<span class="brand-dot">.</span></span>
+      <span class="brand-sub">INDIA PVT. LTD.</span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="products.html">Products</a>
+      <a class="active" href="manufacturing.html">Manufacturing</a>
+      <a href="quality.html">Quality</a>
+      <a href="distributor.html">Distribution</a>
+      <a class="nav-cta" href="contact.html">Let's Talk <span>↗</span></a>
+      <a class="nav-whatsapp" href="https://wa.me/919870177697" target="_blank" rel="noopener noreferrer" aria-label="Chat with Cliva on WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .2 5.3.2 11.9c0 2.1.6 4.2 1.6 6L0 24l6.3-1.7a12 12 0 0 0 5.8 1.5h.1c6.5 0 11.8-5.3 11.8-11.9 0-3.1-1.2-6.1-3.5-8.4ZM12.1 21.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.3-.4a9.8 9.8 0 0 1-1.5-5.3c0-5.5 4.5-10 10-10a9.9 9.9 0 0 1 7.1 2.9 10 10 0 0 1 2.9 7.1c0 5.4-4.5 9.9-10 9.9Zm5.5-7.5c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7l.5-.5c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2.2 3.4 5.3 4.7.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4Z"/>
+        </svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
 <main>
-<section class="pagehero"><div class="container hero-inner"><div class="kicker">MANUFACTURING</div><h1>Inside our plant.</h1><p>Show buyers where and how Cliva products are made, with clear steps from raw material inspection to dispatch.</p></div></section>
-<section class="section"><div class="container grid2"><div class="imagebox"></div><div><div class="kicker">OUR PROCESS</div><h2>Controlled from source to shipment.</h2><div class="steps" style="margin-top:22px"><div class="step"><b>1</b><div><h3>Raw material sourcing and inspection</h3><p style="color:var(--muted)">Incoming checks on every lot before it enters production.</p></div></div><div class="step"><b>2</b><div><h3>Processing and formulation</h3><p style="color:var(--muted)">Purification stages, blending, baking or mixing equipment.</p></div></div><div class="step"><b>3</b><div><h3>In-house lab testing</h3><p style="color:var(--muted)">Batch samples tested before release. [List key parameters.]</p></div></div><div class="step"><b>4</b><div><h3>Hygienic packing and batch coding</h3><p style="color:var(--muted)">Sealed packs with batch number and date for traceability.</p></div></div><div class="step"><b>5</b><div><h3>Dispatch to distributors and buyers</h3><p style="color:var(--muted)">Scheduled delivery across [states / regions].</p></div></div></div></div></div></section>
-<section class="section soft"><div class="container"><div class="sectionhead"><div><div class="kicker">PLANT CAPABILITY</div><h2>Built for consistent supply.</h2></div></div><div class="grid3"><div class="card"><h3>[XX,XXX]</h3><p>Bottles per hour</p></div><div class="card"><h3>[XX] tonnes</h3><p>Food production per month</p></div><div class="card"><h3>[XX,XXX] sq ft</h3><p>Plant area</p></div></div></div></section>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">Our Manufacturing Journey</div>
+      <h1>Every stage matters.<br><span>Every detail counts.</span></h1>
+      <p>
+        Discover the key stages behind a product's journey —
+        from planning and material sourcing to production,
+        packaging and final dispatch.
+      </p>
+      <a href="#process" class="btn btn-primary">Explore The Process →</a>
+      <a href="#videos" class="btn btn-outline">Watch Our Videos ↓</a>
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="container intro-grid">
+    <div>
+      <div class="eyebrow">A Structured Approach</div>
+      <h2>From initial planning to finished products.</h2>
+      <p>
+        A well-organised product journey brings together
+        planning, material selection, production coordination,
+        process checks and packaging. Each stage plays a role
+        in creating a consistent and well-managed workflow.
+      </p>
+    </div>
+    <div class="intro-highlight">
+      <div class="number">11</div>
+      <h3>Key Stages. One Product Journey.</h3>
+      <p>
+        Explore an overview of the major stages involved in a
+        typical manufacturing and delivery process. Actual
+        activities may vary by product category and manufacturing partner.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="process-section" id="process">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">The Process</div>
+      <h2>11 Stages of the Manufacturing Journey</h2>
+      <p>
+        A step-by-step overview of the activities that may form
+        part of a product's journey from requirements to dispatch.
+      </p>
+    </div>
+
+    <div class="stage-grid">
+      <article class="stage-card">
+        <div class="stage-top"><span class="stage-no">STAGE 01</span><span class="stage-line"></span></div>
+        <h3>Requirement Planning</h3>
+        <p>Understanding product requirements, specifications and planned quantities.</p>
+      </article>
+
+      <article class="stage-card">
+        <div class="stage-top"><span class="stage-no">STAGE 02</span><span class="stage-line"></span></div>
+        <h3>Material Sourcing</h3>
+        <p>Identifying and arranging the materials and packaging inputs required for production.</p>
+      </article>
+
+      <article class="stage-card">
+        <div class="stage-top"><span class="stage-no">STAGE 03</span><span class="stage-line"></span></div>
+        <h3>Incoming Material Checks</h3>
+        <p>Reviewing incoming materials against applicable requirements and specifications.</p>
+      </article>
+
+      <article class="stage-card">
+        <div class="stage-top"><span class="stage-no">STAGE 04</span><span class="stage-line"></span></div>
+        <h3>Production Preparation</h3>
+        <p>Preparing the production area, equipment and relevant process requirements.</p>
+      </article>
+
+      <article class="stage-card">
+        <div class="stage-top"><span class="stage-no">STAGE 05</span><span class="stage-line"></span></div>
+        <h3>Processing & Production</h3>
+        <p>Carrying out the relevant product manufacturing or processing activities.</p>
+      </article>
+
+      <article class="stage-card">
+        <div class="stage-top"><span class="stage-no">STAGE 06</span><span class="stage-line"></span></div>
+        <h3>In-Process Checks</h3>
+        <p>Monitoring relevant process parameters and product requirements during production.</p>
+      </article>
+
+      <article class="stage-card">
+        <div class="stage-top"><span class="stage-no">STAGE 07</span><span class="stage-line"></span></div>
+        <h3>Quality Inspection</h3>
+        <p>Reviewing product quality against applicable checks and acceptance criteria.</p>
+      </article>
+
+      <article class="stage-card">
+        <div class="stage-top"><span class="stage-no">STAGE 08</span><span class="stage-line"></span></div>
+        <h3>Filling & Packaging</h3>
+        <p>Filling, packing or preparing finished products in the relevant packaging format.</p>
+      </article>
+
+      <article class="stage-card">
+        <div class="stage-top"><span class="stage-no">STAGE 09</span><span class="stage-line"></span></div>
+        <h3>Labelling & Identification</h3>
+        <p>Applying relevant product labels, identification and packaging information.</p>
+      </article>
+
+      <article class="stage-card">
+        <div class="stage-top"><span class="stage-no">STAGE 10</span><span class="stage-line"></span></div>
+        <h3>Finished Goods Storage</h3>
+        <p>Organising finished products for storage and subsequent order processing.</p>
+      </article>
+
+      <article class="stage-card">
+        <div class="stage-top"><span class="stage-no">STAGE 11</span><span class="stage-line"></span></div>
+        <h3>Order Dispatch</h3>
+        <p>Preparing and coordinating finished product orders for dispatch and delivery.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="video-section" id="videos">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">Inside The Process</div>
+      <h2>A Closer Look at Our Operations</h2>
+      <p>
+        Explore the manufacturing and packaging journey through
+        these process videos.
+      </p>
+    </div>
+
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-frame">
+          <video autoplay muted loop playsinline preload="auto">
+            <source src="assets/videos/manufacturing-video-1.mp4" type="video/mp4">
+            Your browser does not support video playback.
+          </video>
+        </div>
+        <div class="video-info">
+          <div class="video-label">Process Video 01</div>
+          <h3>Manufacturing Process</h3>
+          <p>A closer look at the relevant production and processing activities.</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-frame">
+          <video autoplay muted loop playsinline preload="auto">
+            <source src="assets/videos/manufacturing-video-2.mp4" type="video/mp4">
+            Your browser does not support video playback.
+          </video>
+        </div>
+        <div class="video-info">
+          <div class="video-label">Process Video 02</div>
+          <h3>Packaging & Operations</h3>
+          <p>A closer look at packaging, product handling and related operations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quality-section">
+  <div class="container">
+    <div class="quality-box">
+      <div>
+        <div class="eyebrow">Process & Quality</div>
+        <h2>Attention to detail at every stage.</h2>
+        <p>
+          A structured product journey brings together planning,
+          production coordination, process monitoring, packaging
+          and finished goods handling. Applicable checks depend
+          on the product category and manufacturing setup.
+        </p>
+        <a href="quality.html" class="btn btn-primary">Explore Quality →</a>
+      </div>
+
+      <div class="quality-list">
+        <div class="quality-item"><span>✦</span> Process Planning</div>
+        <div class="quality-item"><span>✦</span> Material Review</div>
+        <div class="quality-item"><span>✦</span> Production Checks</div>
+        <div class="quality-item"><span>✦</span> Quality Inspection</div>
+        <div class="quality-item"><span>✦</span> Packaging Review</div>
+        <div class="quality-item"><span>✦</span> Dispatch Preparation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <div class="eyebrow">Let's Connect</div>
+    <h2>Let's build something together.</h2>
+    <p>
+      Connect with the Cliva team to discuss product categories,
+      business requirements and potential partnership opportunities.
+    </p>
+    <a href="https://wa.me/919870177697?text=Hello%20Cliva%20Team,%20I%20would%20like%20to%20know%20more%20about%20your%20manufacturing%20process."
+       target="_blank" rel="noopener noreferrer" class="btn">Enquire With Us →</a>
+  </div>
+</section>
+
 </main>
-<footer><div class="container"><div class="foot"><div><a class="logo" href="index.html" style="color:#9ad5c6">Cliva<small style="color:#789087">INDIA PVT. LTD.</small></a><p style="font-size:13px;margin-top:18px">Cliva India Pvt. Ltd. makes packaged water, cold drinks, snacks, spices, cookies and home hygiene products for homes, retailers and businesses.</p></div><div><h4>Company</h4><a href="about.html">About us</a><a href="manufacturing.html">Manufacturing</a><a href="quality.html">Quality</a></div><div><h4>Products</h4><a href="products.html">Packaged water</a><a href="products.html">Cold drinks</a><a href="products.html">Namkeen & snacks</a><a href="products.html">Spices</a></div><div><h4>Contact</h4><p style="font-size:13px">213/214, 2nd Floor, Well Done Tech Park, Sohna Road, Sector 48, Gurugram, Haryana 122001</p><p style="font-size:13px;margin-top:10px">+91 98701 77697<br>sales@clivaindia.com</p></div></div><div class="copy"><span>© 2026 Cliva India Pvt. Ltd. All rights reserved.</span><span>Privacy Policy · Terms · LinkedIn · Instagram · YouTube</span></div></div></footer>
-</body></html>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">CLIVA<span>.</span></div>
+        <p>
+          Bringing together everyday essentials across multiple
+          product categories for modern consumers and businesses.
+        </p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="products.html">Products</a>
+          <a href="manufacturing.html">Manufacturing</a>
+          <a href="quality.html">Quality</a>
+          <a href="distributor.html">Distribution</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Contact Us</h4>
+        <p>
+          213/214, 2nd Floor, Well Done Tech Park,<br>
+          Sohna Road, Sector 48, Gurugram,<br>
+          Haryana 122001
+        </p>
+        <p style="margin-top:10px">
+          <a href="tel:+919870177697">+91 98701 77697</a><br>
+          <a href="mailto:sales@clivaindia.com">sales@clivaindia.com</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Cliva India. All rights reserved.</p>
+      <p>Everyday essentials. Made for everyday life.</p>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp"
+   href="https://wa.me/919870177697"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="WhatsApp">✆</a>
+
+<!-- MOBILE MENU -->
+<script>
+const menuButton = document.querySelector(".menu-toggle");
+const navigation = document.querySelector(".nav-links");
+
+if (menuButton && navigation) {
+  menuButton.addEventListener("click", () => {
+    const isOpen = navigation.classList.toggle("is-open");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  navigation.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navigation.classList.remove("is-open");
+      menuButton.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+</script>
+
+</body>
+</html>
