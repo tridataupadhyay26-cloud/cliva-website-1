@@ -10,60 +10,77 @@
 </head>
 <body>
 
-<div class="topbar">
-  <div class="container topbar-inner">
-    <div class="topbar-brand">
-      CLIVA INDIA PVT. LTD.
-      <span>EVERYDAY ESSENTIALS. MADE FOR EVERYDAY LIFE.</span>
-    </div>
+<header class="site-header premium-header">
+  <div class="premium-nav">
 
-    <div class="topbar-contact">
-      <a href="tel:+919870177697">+91 98701 77697</a>
-      <span class="top-separator">|</span>
-      <a href="mailto:sales@clivaindia.com">sales@clivaindia.com</a>
-    </div>
-  </div>
-</div>
+    <!-- Logo -->
+    <a class="brand" href="index.html" aria-label="Cliva Home">
+      <img src="images/cliva-logo.png" alt="Cliva India">
+    </a>
 
-
-  
-<header class="site-header">
-  <div class="container nav-inner">
-
-    <a class="brand" href="index.html" aria-label="Cliva India home">
-  <img src="images/cliva-logo.png" alt="Cliva India Logo">
-</a>
-
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
+    <!-- Mobile Menu -->
+    <button class="menu-toggle" aria-label="Toggle menu"
+      aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
 
+    <!-- Navigation -->
     <nav class="nav-links">
-      <a class="active" href="index.html">Home</a>
+
+      <a href="index.html" class="active">Home</a>
       <a href="about.html">About Us</a>
-      <a href="products.html">Products</a>
+
+      <!-- Products Dropdown -->
+      <div class="product-nav">
+        <button class="product-nav-trigger" type="button"
+          aria-expanded="false">
+          Products <span class="dropdown-arrow">⌄</span>
+        </button>
+
+        <div class="product-dropdown">
+          <a href="products.html#water">Packaged Water <span>↗</span></a>
+          <a href="products.html#beverages">Beverages <span>↗</span></a>
+          <a href="products.html#snacks">Snacks & Namkeen <span>↗</span></a>
+          <a href="products.html#cookies">Cookies <span>↗</span></a>
+          <a href="products.html#spices">Spices <span>↗</span></a>
+          <a href="products.html#hygiene">Home Care <span>↗</span></a>
+          <a href="products.html" class="all-products">Explore All Products →</a>
+        </div>
+      </div>
+
       <a href="manufacturing.html">Manufacturing</a>
       <a href="quality.html">Quality</a>
       <a href="distributor.html">Distribution</a>
 
-<a class="nav-cta" href="contact.html">Let's Talk <span>↗</span></a>
+      <a class="nav-cta" href="contact.html">
+        Let's Talk <span>↗</span>
+      </a>
+
       <a class="nav-whatsapp"
          href="https://wa.me/919870177697"
          target="_blank"
          rel="noopener noreferrer"
-         aria-label="Chat with Cliva on WhatsApp">
+         aria-label="WhatsApp Cliva">
         <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .2 5.3.2 11.9c0 2.1.6 4.2 1.6 6L0 24l6.3-1.7a12 12 0 0 0 5.8 1.5h.1c6.5 0 11.8-5.3 11.8-11.9 0-3.1-1.2-6.1-3.5-8.4ZM12.1 21.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.3-.4a9.8 9.8 0 0 1-1.5-5.3c0-5.5 4.5-10 10-10a9.9 9.9 0 0 1 7.1 2.9 10 10 0 0 1 2.9 7.1c0 5.4-4.5 9.9-10 9.9Zm5.5-7.5c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7l.5-.5c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2.2 3.4 5.3 4.7.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4Z"/>
+          <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .2 5.3.2 11.9c0 2.1.6 4.2 1.6 6L0 24l6.3-1.7a12 12 0 0 0 5.8 1.5h.1c6.5 0 11.8-5.3 11.8-11.9 0-3.1-1.2-6.1-3.5-8.4ZM12.1 21.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.3-.4a9.8 9.8 0 0 1-1.5-5.3c0-5.5 4.5-10 10-10a9.9 9.9 0 0 1 7.1 2.9 10 10 0 0 1 2.9 7.1c0 5.4-4.5 9.9-10 9.9Z"/>
         </svg>
       </a>
-    </nav>
 
+    </nav>
   </div>
 </header>
 
 
   <main>
     <section class="hero">
+      
+<video class="hero-bg-video" autoplay muted loop playsinline>
+  <source src="assets/videos/manufacturing-video-1.mp4" type="video/mp4">
+</video>
+<div class="hero-video-overlay"></div>
+
       <div class="hero-orb orb-one"></div>
       <div class="hero-orb orb-two"></div>
 
@@ -95,71 +112,65 @@
 
           <div class="hero-note">
             <span class="note-line"></span>
-            <span>For retailers, distributors and business buyers</span>
+    
           </div>
         </div>
 
         
 
+
 <div class="hero-art hero-product-image">
-  <img
-    src="images/cliva-products-banner.png"
-    alt="Cliva India complete product range"
-  >
+  <video class="hero-background-video" autoplay muted loop playsinline>
+    <source src="assets/videos/manufacturing-video-1.mp4" type="video/mp4">
+  </video>
 </div>
-
-
-
-        
-
-          <div class="art-label label-bottom">A WORLD OF<br>EVERYDAY GOOD</div>
-          <div class="art-spark spark-one">✳</div>
-          <div class="art-spark spark-two">✦</div>
-        </div>
-      </div>
-
-      <div class="hero-bottom">
-        <div class="container hero-bottom-inner">
-          <span>ONE BRAND</span>
-          <span class="bottom-cross">✳</span>
-          <span>MULTIPLE CATEGORIES</span>
-          <span class="bottom-cross">✳</span>
-          <span>BUILT AROUND EVERYDAY NEEDS</span>
-        </div>
-      </div>
     </section>
+<!-- CLIVA PRODUCT SHOWCASE -->
+<!-- CLIVA TRANSPARENT PRODUCT SHOWCASE -->
+<section class="cliva-showcase">
+  <div class="product-slider">
+    <div class="product-track">
 
-<!-- CLIVA PRODUCT IMAGE MARQUEE -->
-<section class="welcome-product-strip">
-  <div class="welcome-marquee">
-    <div class="welcome-marquee-track">
+      <img src="images/Cliva_Product_01.png" alt="Cliva Product 1">
+      <img src="images/Cliva_Product_02.png" alt="Cliva Product 2">
+      <img src="images/Cliva_Product_03.png" alt="Cliva Product 3">
+      <img src="images/Cliva_Product_04.png" alt="Cliva Product 4">
+      <img src="images/Cliva_Product_05.png" alt="Cliva Product 5">
+      <img src="images/Cliva_Product_06.png" alt="Cliva Product 6">
+      <img src="images/Cliva_Product_07.png" alt="Cliva Product 7">
+      <img src="images/Cliva_Product_08.png" alt="Cliva Product 8">
+      <img src="images/Cliva_Product_09.png" alt="Cliva Product 9">
+      <img src="images/Cliva_Product_10.png" alt="Cliva Product 10">
+      <img src="images/Cliva_Product_11.png" alt="Cliva Product 11">
+      <img src="images/Cliva_Product_12.png" alt="Cliva Product 12">
+      <img src="images/Cliva_Product_13.png" alt="Cliva Product 13">
+      <img src="images/Cliva_Product_14.png" alt="Cliva Product 14">
+      <img src="images/Cliva_Product_15.png" alt="Cliva Product 15">
+      <img src="images/Cliva_Product_16.png" alt="Cliva Product 16">
+      <img src="images/Cliva_Product_17.png" alt="Cliva Product 17">
+      <img src="images/Cliva_Product_18.png" alt="Cliva Product 18">
+      <img src="images/Cliva_Product_19.png" alt="Cliva Product 19">
 
-      <div class="welcome-marquee-item"><img src="images/image1.png" alt="Cliva product 1"></div>
-      <div class="welcome-marquee-item"><img src="images/image2.png" alt="Cliva product 2"></div>
-      <div class="welcome-marquee-item"><img src="images/image3.png" alt="Cliva product 3"></div>
-      <div class="welcome-marquee-item"><img src="images/image4.png" alt="Cliva product 4"></div>
-      <div class="welcome-marquee-item"><img src="images/image5.png" alt="Cliva product 5"></div>
-      <div class="welcome-marquee-item"><img src="images/image6.png" alt="Cliva product 6"></div>
-      <div class="welcome-marquee-item"><img src="images/image7.png" alt="Cliva product 7"></div>
-      <div class="welcome-marquee-item"><img src="images/image8.png" alt="Cliva product 8"></div>
-      <div class="welcome-marquee-item"><img src="images/image9.png" alt="Cliva product 9"></div>
-      <div class="welcome-marquee-item"><img src="images/image10.png" alt="Cliva product 10"></div>
-      <div class="welcome-marquee-item"><img src="images/image11.png" alt="Cliva product 11"></div>
-      <div class="welcome-marquee-item"><img src="images/image12.png" alt="Cliva product 12"></div>
-
-      <!-- Duplicate for seamless scrolling -->
-      <div class="welcome-marquee-item" aria-hidden="true"><img src="images/image1.png" alt=""></div>
-      <div class="welcome-marquee-item" aria-hidden="true"><img src="images/image2.png" alt=""></div>
-      <div class="welcome-marquee-item" aria-hidden="true"><img src="images/image3.png" alt=""></div>
-      <div class="welcome-marquee-item" aria-hidden="true"><img src="images/image4.png" alt=""></div>
-      <div class="welcome-marquee-item" aria-hidden="true"><img src="images/image5.png" alt=""></div>
-      <div class="welcome-marquee-item" aria-hidden="true"><img src="images/image6.png" alt=""></div>
-      <div class="welcome-marquee-item" aria-hidden="true"><img src="images/image7.png" alt=""></div>
-      <div class="welcome-marquee-item" aria-hidden="true"><img src="images/image8.png" alt=""></div>
-      <div class="welcome-marquee-item" aria-hidden="true"><img src="images/image9.png" alt=""></div>
-      <div class="welcome-marquee-item" aria-hidden="true"><img src="images/image10.png" alt=""></div>
-      <div class="welcome-marquee-item" aria-hidden="true"><img src="images/image11.png" alt=""></div>
-      <div class="welcome-marquee-item" aria-hidden="true"><img src="images/image12.png" alt=""></div>
+      <!-- Repeat for infinite movement -->
+      <img src="images/Cliva_Product_01.png" alt="">
+      <img src="images/Cliva_Product_02.png" alt="">
+      <img src="images/Cliva_Product_03.png" alt="">
+      <img src="images/Cliva_Product_04.png" alt="">
+      <img src="images/Cliva_Product_05.png" alt="">
+      <img src="images/Cliva_Product_06.png" alt="">
+      <img src="images/Cliva_Product_07.png" alt="">
+      <img src="images/Cliva_Product_08.png" alt="">
+      <img src="images/Cliva_Product_09.png" alt="">
+      <img src="images/Cliva_Product_10.png" alt="">
+      <img src="images/Cliva_Product_11.png" alt="">
+      <img src="images/Cliva_Product_12.png" alt="">
+      <img src="images/Cliva_Product_13.png" alt="">
+      <img src="images/Cliva_Product_14.png" alt="">
+      <img src="images/Cliva_Product_15.png" alt="">
+      <img src="images/Cliva_Product_16.png" alt="">
+      <img src="images/Cliva_Product_17.png" alt="">
+      <img src="images/Cliva_Product_18.png" alt="">
+      <img src="images/Cliva_Product_19.png" alt="">
 
     </div>
   </div>
@@ -215,20 +226,21 @@
 
     </div>
 
-    <!-- RIGHT SIDE IMAGE -->
-    <div class="cliva-about-image">
+    
+<!-- RIGHT SIDE VIDEO -->
+<div class="cliva-about-image">
 
-      <img
-        src="images/cliva-products.png"
-        alt="Cliva India FMCG products"
-      >
+  <video autoplay muted loop playsinline preload="auto">
+    <source src="assets/videos/manufacturing-video-1.mp4" type="video/mp4">
+  </video>
 
-      <div class="cliva-image-label">
-        <span>CLIVA INDIA</span>
-        <p>Everyday Essentials. One Growing Brand.</p>
-      </div>
+  <div class="cliva-image-label">
+    <span>CLIVA INDIA</span>
+    <p>Everyday Essentials. One Growing Brand.</p>
+  </div>
 
-    </div>
+</div>
+
 
   </div>
 </section>
@@ -454,79 +466,7 @@
   </div>
 </section>
 
-<section class="product-marquee-section">
-  <div class="marquee-heading">
-    <span>THE CLIVA COLLECTION</span>
-    <p>Everyday favourites, all in one place.</p>
-  </div>
 
-  <div class="product-marquee">
-    <div class="marquee-track">
-
-      <div class="marquee-item">
-        <img src="images/water.png" alt="Cliva packaged water">
-        <span>PACKAGED WATER</span>
-      </div>
-
-      <div class="marquee-item">
-        <img src="images/drinks.png" alt="Cliva cold drinks">
-        <span>COLD DRINKS</span>
-      </div>
-
-      <div class="marquee-item">
-        <img src="images/snacks.png" alt="Cliva snacks">
-        <span>NAMKEEN & SNACKS</span>
-      </div>
-
-      <div class="marquee-item">
-        <img src="images/spices.png" alt="Cliva spices">
-        <span>SPICES & MASALA</span>
-      </div>
-
-      <div class="marquee-item">
-        <img src="images/cookies.png" alt="Cliva cookies">
-        <span>COOKIES</span>
-      </div>
-
-      <div class="marquee-item">
-        <img src="images/home-care.png" alt="Cliva home care">
-        <span>HOME & HYGIENE</span>
-      </div>
-
-      <!-- Duplicate images for seamless movement -->
-      <div class="marquee-item" aria-hidden="true">
-        <img src="images/water.png" alt="">
-        <span>PACKAGED WATER</span>
-      </div>
-
-      <div class="marquee-item" aria-hidden="true">
-        <img src="images/drinks.png" alt="">
-        <span>COLD DRINKS</span>
-      </div>
-
-      <div class="marquee-item" aria-hidden="true">
-        <img src="images/snacks.png" alt="">
-        <span>NAMKEEN & SNACKS</span>
-      </div>
-
-      <div class="marquee-item" aria-hidden="true">
-        <img src="images/spices.png" alt="">
-        <span>SPICES & MASALA</span>
-      </div>
-
-      <div class="marquee-item" aria-hidden="true">
-        <img src="images/cookies.png" alt="">
-        <span>COOKIES</span>
-      </div>
-
-      <div class="marquee-item" aria-hidden="true">
-        <img src="images/home-care.png" alt="">
-        <span>HOME & HYGIENE</span>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 
     <section class="closing-section section-padding">
@@ -583,22 +523,94 @@
   </footer>
 
   <script>
-    const menuButton = document.querySelector(".menu-toggle");
-    const navigation = document.querySelector(".nav-links");
+  const menuButton = document.querySelector(".menu-toggle");
+  const navigation = document.querySelector(".nav-links");
+  const productMenu = document.querySelector(".product-nav");
+  const productTrigger = document.querySelector(".product-nav-trigger");
 
-    menuButton.addEventListener("click", () => {
-      const isOpen = navigation.classList.toggle("is-open");
-      menuButton.setAttribute("aria-expanded", String(isOpen));
+  // Mobile navigation
+  menuButton.addEventListener("click", () => {
+    const isOpen = navigation.classList.toggle("is-open");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  // Product dropdown
+  productTrigger.addEventListener("click", () => {
+    const isOpen = productMenu.classList.toggle("is-open");
+    productTrigger.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  // Close menu after navigation
+  navigation.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navigation.classList.remove("is-open");
+      productMenu.classList.remove("is-open");
+      menuButton.setAttribute("aria-expanded", "false");
+      productTrigger.setAttribute("aria-expanded", "false");
     });
+  });
+  
+  
+// CLIVA PRODUCT POPUP
 
-    navigation.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navigation.classList.remove("is-open");
-        menuButton.setAttribute("aria-expanded", "false");
+document.addEventListener("DOMContentLoaded", function () {
+
+  const clivaModal = document.getElementById("clivaModal");
+  const popupImage = document.getElementById("clivaPopupImage");
+  const popupTitle = document.getElementById("clivaPopupTitle");
+  const popupDescription = document.getElementById("clivaPopupDescription");
+  const closeButton = document.getElementById("clivaClose");
+
+  // Open popup on product click
+  document.querySelectorAll(".cliva-showcase .product-track img")
+    .forEach((img) => {
+
+      img.style.cursor = "pointer";
+
+      img.addEventListener("click", function () {
+
+        if (!clivaModal || !popupImage) return;
+
+        popupImage.src = this.src;
+        popupImage.alt = this.alt || "CLIVA Product";
+
+        const productNumber = this.src.match(/Cliva_Product_(\d+)/i);
+        const number = productNumber ? productNumber[1] : "";
+
+        if (popupTitle) {
+          popupTitle.textContent = number
+            ? "CLIVA Product " + number
+            : (this.alt || "CLIVA Product");
+        }
+
+        if (popupDescription) {
+          popupDescription.textContent =
+            "Discover quality and freshness with CLIVA. Contact us for product enquiries and business opportunities.";
+        }
+
+        clivaModal.classList.add("active");
+        document.body.style.overflow = "hidden";
       });
-    });
-  </script>
 
-</body>
-</html>
-npm 
+    });
+
+  // Close popup
+  function closeClivaPopup() {
+    if (!clivaModal) return;
+    clivaModal.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  if (closeButton) {
+    closeButton.addEventListener("click", closeClivaPopup);
+  }
+
+  if (clivaModal) {
+    clivaModal.addEventListener("click", function (event) {
+      if (event.target === clivaModal) {
+        closeClivaPopup();
+      }
+    });
+  }
+
+});

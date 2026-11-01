@@ -212,44 +212,65 @@ footer a:hover{color:white}
 
 <body>
 
-<!-- COMMON CLIVA HEADER -->
-<div class="topbar">
-  <div class="container topbar-inner">
-    <div class="topbar-brand">
-      CLIVA INDIA PVT. LTD.
-      <span>EVERYDAY ESSENTIALS. MADE FOR EVERYDAY LIFE.</span>
-    </div>
-    <div class="topbar-contact">
-      <a href="tel:+919870177697">+91 98701 77697</a>
-      <span class="top-separator">|</span>
-      <a href="mailto:sales@clivaindia.com">sales@clivaindia.com</a>
-    </div>
-  </div>
-</div>
 
-<header class="site-header">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html" aria-label="Cliva India home">
-  <img src="images/cliva-logo.png" alt="Cliva India Logo">
-</a>
+<header class="site-header premium-header">
+  <div class="premium-nav">
 
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
+    <!-- Logo -->
+    <a class="brand" href="index.html" aria-label="Cliva Home">
+      <img src="images/cliva-logo.png" alt="Cliva India">
+    </a>
+
+    <!-- Mobile Menu -->
+    <button class="menu-toggle" aria-label="Toggle menu"
+      aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
 
+    <!-- Navigation -->
     <nav class="nav-links">
-      <a href="index.html">Home</a>
+
+      <a href="index.html" class="active">Home</a>
       <a href="about.html">About Us</a>
-      <a href="products.html">Products</a>
+
+      <!-- Products Dropdown -->
+      <div class="product-nav">
+        <button class="product-nav-trigger" type="button"
+          aria-expanded="false">
+          Products <span class="dropdown-arrow">⌄</span>
+        </button>
+
+        <div class="product-dropdown">
+          <a href="products.html#water">Packaged Water <span>↗</span></a>
+          <a href="products.html#beverages">Beverages <span>↗</span></a>
+          <a href="products.html#snacks">Snacks & Namkeen <span>↗</span></a>
+          <a href="products.html#cookies">Cookies <span>↗</span></a>
+          <a href="products.html#spices">Spices <span>↗</span></a>
+          <a href="products.html#hygiene">Home Care <span>↗</span></a>
+          <a href="products.html" class="all-products">Explore All Products →</a>
+        </div>
+      </div>
+
       <a href="manufacturing.html">Manufacturing</a>
-      <a class="active" href="quality.html">Quality</a>
+      <a href="quality.html">Quality</a>
       <a href="distributor.html">Distribution</a>
-      <a class="nav-cta" href="contact.html">Let's Talk <span>↗</span></a>
-      <a class="nav-whatsapp" href="https://wa.me/919870177697" target="_blank" rel="noopener noreferrer" aria-label="Chat with Cliva on WhatsApp">
+
+      <a class="nav-cta" href="contact.html">
+        Let's Talk <span>↗</span>
+      </a>
+
+      <a class="nav-whatsapp"
+         href="https://wa.me/919870177697"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="WhatsApp Cliva">
         <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .2 5.3.2 11.9c0 2.1.6 4.2 1.6 6L0 24l6.3-1.7a12 12 0 0 0 5.8 1.5h.1c6.5 0 11.8-5.3 11.8-11.9 0-3.1-1.2-6.1-3.5-8.4ZM12.1 21.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.3-.4a9.8 9.8 0 0 1-1.5-5.3c0-5.5 4.5-10 10-10a9.9 9.9 0 0 1 7.1 2.9 10 10 0 0 1 2.9 7.1c0 5.4-4.5 9.9-10 9.9Zm5.5-7.5c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7l.5-.5c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2.2 3.4 5.3 4.7.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4Z"/>
+          <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .2 5.3.2 11.9c0 2.1.6 4.2 1.6 6L0 24l6.3-1.7a12 12 0 0 0 5.8 1.5h.1c6.5 0 11.8-5.3 11.8-11.9 0-3.1-1.2-6.1-3.5-8.4ZM12.1 21.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.3-.4a9.8 9.8 0 0 1-1.5-5.3c0-5.5 4.5-10 10-10a9.9 9.9 0 0 1 7.1 2.9 10 10 0 0 1 2.9 7.1c0 5.4-4.5 9.9-10 9.9Z"/>
         </svg>
       </a>
+
     </nav>
   </div>
 </header>
