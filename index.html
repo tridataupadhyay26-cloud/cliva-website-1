@@ -52,7 +52,7 @@
 
       <a href="manufacturing.html">Manufacturing</a>
       <a href="quality.html">Quality</a>
-      <a href="distributor.html">Distribution</a>
+      <a href="distributor.html">Partner With Us</a>
 
       <a class="nav-cta" href="contact.html">
         Let's Talk <span>↗</span>
@@ -86,10 +86,7 @@
 
       <div class="container hero-layout">
         <div class="hero-copy">
-          <div class="eyebrow">
-            <span class="eyebrow-dot"></span>
-            FMCG · GURUGRAM, INDIA
-          </div>
+        
 
           <h1>Everyday essentials.<br>
             <span>Made for everyday life.</span>
@@ -416,7 +413,7 @@
         <div class="grow-line"></div>
 
         <p>
-          Connect with Cliva for product enquiries, distribution
+          Connect with Cliva for product enquiries, Partner With Us
           opportunities and business supply requirements.
         </p>
 
@@ -431,7 +428,7 @@
           <span class="grow-number">01</span>
           <div class="grow-card-content">
             <h3>Become a distributor</h3>
-            <p>Explore distribution opportunities</p>
+            <p>Explore Partner With Us opportunities</p>
           </div>
           <span class="grow-arrow">↗</span>
         </a>
@@ -457,6 +454,7 @@
       </div>
     </div>
 
+
     <div class="grow-footer">
       <span></span>
       YOUR NEXT STEP STARTS HERE
@@ -480,137 +478,115 @@
       </div>
     </section>
   </main>
+  
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-main">
-        <div class="footer-about">
-          <a class="brand footer-brand" href="index.html">
-            <span class="brand-name">cliva<span class="brand-dot">.</span></span>
-            <span class="brand-sub">INDIA PVT. LTD.</span>
-          </a>
-          <p>Everyday product categories, brought together for homes, retailers and business buyers.</p>
-        </div>
+  
+<footer class="site-footer">
+  <div class="container">
 
-        <div class="footer-column">
-          <h4>Explore</h4>
-          <a href="about.html">About Us</a>
-          <a href="products.html">Our Products</a>
-          <a href="manufacturing.html">Manufacturing</a>
-          <a href="quality.html">Quality</a>
-        </div>
+    
+<div class="footer-main">
 
-        <div class="footer-column">
-          <h4>Business</h4>
-          <a href="distributor.html">Distribution</a>
-          <a href="contact.html">Bulk Enquiries</a>
-          <a href="contact.html">Contact Us</a>
-        </div>
+  <!-- CLIVA LOGO ONLY -->
+  <div class="footer-about">
+    <a class="footer-logo" href="index.html">
+      <img src="images/cliva-logo.png" alt="Cliva India">
+    </a>
+  </div>
 
-        <div class="footer-column footer-contact">
-          <h4>Say Hello</h4>
-          <a href="mailto:sales@clivaindia.com">sales@clivaindia.com</a>
-          <a href="tel:+919870177697">+91 98701 77697</a>
-          <p>Well Done Tech Park, Sector 48,<br>Gurugram, Haryana 122001, India</p>
-        </div>
+  <!-- EXPLORE -->
+  <div class="footer-column">
+    <h4>Explore</h4>
+    <a href="about.html">About Us</a>
+    <a href="products.html">Products</a>
+    <a href="manufacturing.html">Manufacturing</a>
+    <a href="quality.html">Quality</a>
+    <a href="distributor.html">Partner With Us</a>
+  </div>
+
+  <!-- QUICK LINKS -->
+  <div class="footer-column">
+    <h4>Quick Links</h4>
+    <a href="contact.html">Contact Us</a>
+    <a href="distributor.html">Partner With Us</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-conditions.html">Terms & Conditions</a>
+  </div>
+
+  <!-- GET IN TOUCH -->
+  <div class="footer-column footer-contact">
+    <h4>Get in Touch</h4>
+    <a href="mailto:sales@clivaindia.com">sales@clivaindia.com</a>
+    <a href="tel:+919870177697">+91 98701 77697</a>
+    <p>Gurugram, Haryana 122001, India</p>
+  </div>
+
+  <!-- FOLLOW US -->
+  <div class="footer-column footer-social-column">
+    <h4>Follow Us</h4>
+    <div class="footer-socials">
+      <a class="facebook" href="YOUR_FACEBOOK_URL" aria-label="Facebook">f</a>
+      <a class="instagram" href="YOUR_INSTAGRAM_URL" aria-label="Instagram">◎</a>
+      <a class="whatsapp" href="https://wa.me/919870177697" aria-label="WhatsApp">◔</a>
+      <a class="linkedin" href="YOUR_LINKEDIN_URL" aria-label="LinkedIn">in</a>
+      <a class="twitter" href="#" aria-label="X">𝕏</a>
+    </div>
+  </div>
+
+</div>
+
       </div>
 
-      <div class="footer-bottom">
-        <span>© 2026 Cliva India Pvt. Ltd. All rights reserved.</span>
-        <span>Gurugram, Haryana, India</span>
+    </div>
+
+    <!-- GIANT CLIVA WATERMARK -->
+    <div class="footer-watermark">CLIVA</div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+      <span>© 2026 Cliva India Pvt. Ltd. All Rights Reserved.</span>
+      <div>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-conditions.html">Terms & Conditions</a>
       </div>
     </div>
-  </footer>
 
-  <script>
+  </div>
+</footer>
+
+<script>
   const menuButton = document.querySelector(".menu-toggle");
   const navigation = document.querySelector(".nav-links");
   const productMenu = document.querySelector(".product-nav");
   const productTrigger = document.querySelector(".product-nav-trigger");
 
   // Mobile navigation
-  menuButton.addEventListener("click", () => {
-    const isOpen = navigation.classList.toggle("is-open");
-    menuButton.setAttribute("aria-expanded", String(isOpen));
-  });
+  if (menuButton && navigation) {
+    menuButton.addEventListener("click", () => {
+      const isOpen = navigation.classList.toggle("is-open");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+    });
+  }
 
   // Product dropdown
-  productTrigger.addEventListener("click", () => {
-    const isOpen = productMenu.classList.toggle("is-open");
-    productTrigger.setAttribute("aria-expanded", String(isOpen));
-  });
+  if (productTrigger && productMenu) {
+    productTrigger.addEventListener("click", () => {
+      const isOpen = productMenu.classList.toggle("is-open");
+      productTrigger.setAttribute("aria-expanded", String(isOpen));
+    });
+  }
 
   // Close menu after navigation
-  navigation.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      navigation.classList.remove("is-open");
-      productMenu.classList.remove("is-open");
-      menuButton.setAttribute("aria-expanded", "false");
-      productTrigger.setAttribute("aria-expanded", "false");
-    });
-  });
-  
-  
-// CLIVA PRODUCT POPUP
-
-document.addEventListener("DOMContentLoaded", function () {
-
-  const clivaModal = document.getElementById("clivaModal");
-  const popupImage = document.getElementById("clivaPopupImage");
-  const popupTitle = document.getElementById("clivaPopupTitle");
-  const popupDescription = document.getElementById("clivaPopupDescription");
-  const closeButton = document.getElementById("clivaClose");
-
-  // Open popup on product click
-  document.querySelectorAll(".cliva-showcase .product-track img")
-    .forEach((img) => {
-
-      img.style.cursor = "pointer";
-
-      img.addEventListener("click", function () {
-
-        if (!clivaModal || !popupImage) return;
-
-        popupImage.src = this.src;
-        popupImage.alt = this.alt || "CLIVA Product";
-
-        const productNumber = this.src.match(/Cliva_Product_(\d+)/i);
-        const number = productNumber ? productNumber[1] : "";
-
-        if (popupTitle) {
-          popupTitle.textContent = number
-            ? "CLIVA Product " + number
-            : (this.alt || "CLIVA Product");
-        }
-
-        if (popupDescription) {
-          popupDescription.textContent =
-            "Discover quality and freshness with CLIVA. Contact us for product enquiries and business opportunities.";
-        }
-
-        clivaModal.classList.add("active");
-        document.body.style.overflow = "hidden";
+  if (navigation) {
+    navigation.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navigation.classList.remove("is-open");
+        productMenu?.classList.remove("is-open");
+        menuButton?.setAttribute("aria-expanded", "false");
+        productTrigger?.setAttribute("aria-expanded", "false");
       });
-
-    });
-
-  // Close popup
-  function closeClivaPopup() {
-    if (!clivaModal) return;
-    clivaModal.classList.remove("active");
-    document.body.style.overflow = "";
-  }
-
-  if (closeButton) {
-    closeButton.addEventListener("click", closeClivaPopup);
-  }
-
-  if (clivaModal) {
-    clivaModal.addEventListener("click", function (event) {
-      if (event.target === clivaModal) {
-        closeClivaPopup();
-      }
     });
   }
-
-});
+</script>
+</body>
+</html>
