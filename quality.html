@@ -11,234 +11,575 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- COMMON WEBSITE CSS -->
 <link rel="stylesheet" href="assets/style.css">
 
 <style>
-:root{
-  --blue:#0755a5;
-  --dark:#102d4b;
-  --text:#62758a;
-  --light:#f3f8fd;
-  --border:#e4edf5;
+/* ==================================
+   QUALITY PAGE - ONLY PAGE STYLING
+================================== */
+
+.quality-page {
+  --q-blue: #0755a5;
+  --q-dark: #102d4b;
+  --q-text: #62758a;
+  --q-light: #f3f8fd;
+  --q-border: #e4edf5;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--q-dark);
+  overflow: hidden;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;color:var(--dark);overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-.container{width:90%;max-width:1200px;margin:auto}
+
+.quality-page *,
+.quality-page *::before,
+.quality-page *::after {
+  box-sizing: border-box;
+}
+
+.quality-page a {
+  text-decoration: none;
+}
+
+.quality-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.quality-page h1,
+.quality-page h2,
+.quality-page h3 {
+  font-family: 'Manrope', sans-serif;
+}
 
 /* HERO */
-.hero{
-  background:linear-gradient(115deg,#e9f3ff,#f7fbff 65%,#e6f2ff);
-  padding:105px 0 100px;
-  position:relative;overflow:hidden;
+
+.quality-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 110px 0 105px;
+  background: linear-gradient(115deg, #e9f3ff, #f7fbff 65%, #e6f2ff);
 }
-.hero:before{
-  content:"";position:absolute;width:480px;height:480px;
-  border:1px solid #0755a51a;border-radius:50%;
-  right:-100px;top:-160px;
-  box-shadow:0 0 0 55px #0755a506,0 0 0 110px #0755a504;
+
+.quality-hero::before {
+  content: "";
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border: 1px solid #0755a51a;
+  border-radius: 50%;
+  right: -100px;
+  top: -160px;
+  box-shadow: 0 0 0 55px #0755a506, 0 0 0 110px #0755a504;
 }
-.hero-content{max-width:790px;position:relative;z-index:1}
-.eyebrow{
-  font-size:11px;font-weight:800;letter-spacing:2.5px;
-  text-transform:uppercase;color:var(--blue);margin-bottom:19px;
+
+.quality-hero-content {
+  max-width: 790px;
+  position: relative;
+  z-index: 1;
 }
-.hero h1{
-  font-family:Manrope,sans-serif;
-  font-size:clamp(42px,6vw,70px);
-  line-height:1.12;letter-spacing:-2.8px;margin-bottom:23px;
+
+.quality-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--q-blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
-.hero h1 span{color:var(--blue)}
-.hero p{font-size:16px;line-height:1.9;color:var(--text);max-width:650px}
-.btn{
-  display:inline-block;padding:15px 24px;border-radius:5px;
-  font-size:13px;font-weight:800;margin:28px 10px 0 0;transition:.25s;
+
+.quality-eyebrow::before {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background: var(--q-blue);
 }
-.btn-primary{background:var(--blue);color:#fff}
-.btn-primary:hover{background:#063f7a;transform:translateY(-2px)}
-.btn-outline{border:1px solid #cbdbea;background:#fff;color:var(--dark)}
-.btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+
+.quality-hero h1 {
+  font-size: clamp(42px, 6vw, 70px);
+  line-height: 1.12;
+  letter-spacing: -2.8px;
+  margin: 0 0 23px;
+  color: var(--q-dark);
+}
+
+.quality-hero h1 span {
+  color: var(--q-blue);
+}
+
+.quality-hero p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--q-text);
+  max-width: 650px;
+}
+
+.quality-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 24px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  margin: 28px 10px 0 0;
+  transition: .25s;
+}
+
+.quality-btn-primary {
+  background: var(--q-blue);
+  color: #fff !important;
+}
+
+.quality-btn-primary:hover {
+  background: #063f7a;
+  transform: translateY(-2px);
+}
+
+.quality-btn-outline {
+  border: 1px solid #cbdbea;
+  background: #fff;
+  color: var(--q-dark) !important;
+}
+
+.quality-btn-outline:hover {
+  border-color: var(--q-blue);
+  color: var(--q-blue) !important;
+}
 
 /* INTRO */
-.intro{padding:85px 0}
-.intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:65px;align-items:center}
-.intro h2{
-  font-family:Manrope,sans-serif;font-size:clamp(30px,4vw,43px);
-  line-height:1.25;letter-spacing:-1.3px;margin-bottom:20px;
-}
-.intro p{font-size:14px;line-height:2;color:var(--text)}
-.intro-highlight{
-  padding:36px;background:var(--light);
-  border-radius:12px;border-left:4px solid var(--blue);
-}
-.intro-highlight h3{font-size:21px;margin-bottom:13px}
-.intro-highlight p{font-size:13px}
 
-/* QUALITY PRINCIPLES */
-.principles{padding:90px 0;background:#f5f9fd}
-.section-heading{text-align:center;max-width:710px;margin:0 auto 55px}
-.section-heading h2{
-  font-family:Manrope,sans-serif;
-  font-size:clamp(30px,4vw,45px);
-  letter-spacing:-1.5px;margin-bottom:15px;
+.quality-intro {
+  padding: 90px 0;
 }
-.section-heading p{font-size:14px;color:var(--text);line-height:1.9}
-.principle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.principle-card{
-  background:#fff;border:1px solid var(--border);
-  border-radius:10px;padding:30px 26px;transition:.3s;
-  position:relative;overflow:hidden;
-}
-.principle-card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 15px 35px #102d4b12;
-  border-color:#c6dbee;
-}
-.principle-number{
-  font-family:Manrope,sans-serif;font-size:30px;
-  font-weight:800;color:#d7e8f8;margin-bottom:22px;
-}
-.principle-card h3{font-family:Manrope,sans-serif;font-size:18px;margin-bottom:12px}
-.principle-card p{font-size:13px;color:var(--text);line-height:1.85}
-.principle-card:after{
-  content:"";position:absolute;bottom:0;left:0;
-  height:3px;width:0;background:var(--blue);transition:.3s;
-}
-.principle-card:hover:after{width:100%}
 
-/* QUALITY JOURNEY */
-.journey{padding:90px 0}
-.journey-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:65px;align-items:start}
-.journey-heading{position:sticky;top:120px}
-.journey-heading h2{
-  font-family:Manrope,sans-serif;font-size:clamp(30px,4vw,42px);
-  line-height:1.25;letter-spacing:-1.3px;margin-bottom:18px;
+.quality-intro-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 65px;
+  align-items: center;
 }
-.journey-heading p{font-size:14px;line-height:1.9;color:var(--text)}
-.journey-list{border-left:2px solid #dceaf7;padding-left:30px}
-.journey-item{position:relative;padding:0 0 34px}
-.journey-item:last-child{padding-bottom:0}
-.journey-item:before{
-  content:"";position:absolute;left:-38px;top:5px;
-  width:13px;height:13px;background:var(--blue);
-  border:4px solid #e5f1fc;border-radius:50%;
+
+.quality-intro h2 {
+  font-size: clamp(30px, 4vw, 43px);
+  line-height: 1.25;
+  letter-spacing: -1.3px;
+  margin: 0 0 20px;
 }
-.journey-item span{
-  font-size:10px;color:var(--blue);font-weight:800;
-  letter-spacing:1.7px;
+
+.quality-intro p {
+  font-size: 14px;
+  line-height: 2;
+  color: var(--q-text);
 }
-.journey-item h3{font-family:Manrope,sans-serif;font-size:18px;margin:8px 0}
-.journey-item p{font-size:13px;line-height:1.8;color:var(--text)}
+
+.quality-highlight {
+  padding: 36px;
+  background: var(--q-light);
+  border-radius: 12px;
+  border-left: 4px solid var(--q-blue);
+}
+
+.quality-highlight h3 {
+  font-size: 21px;
+  margin: 0 0 13px;
+}
+
+/* FOCUS AREAS */
+
+.quality-principles {
+  padding: 95px 0;
+  background: #f5f9fd;
+}
+
+.quality-section-heading {
+  max-width: 760px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.quality-section-heading .quality-eyebrow {
+  margin-bottom: 18px;
+}
+
+.quality-section-heading h2 {
+  font-size: clamp(35px, 4.5vw, 49px);
+  line-height: 1.16;
+  letter-spacing: -1.8px;
+  margin: 0 0 18px;
+}
+
+.quality-section-heading h2 span {
+  color: var(--q-blue);
+}
+
+.quality-section-heading p {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--q-text);
+}
+
+.quality-principle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.quality-principle-card {
+  background: #fff;
+  border: 1px solid var(--q-border);
+  border-radius: 12px;
+  padding: 30px 26px;
+  transition: .3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.quality-principle-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px #102d4b12;
+  border-color: #c6dbee;
+}
+
+.quality-number {
+  font-family: 'Manrope', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: #d7e8f8;
+  margin-bottom: 22px;
+}
+
+.quality-principle-card h3 {
+  font-size: 18px;
+  margin: 0 0 12px;
+}
+
+.quality-principle-card p {
+  font-size: 13px;
+  color: var(--q-text);
+  line-height: 1.85;
+}
+
+.quality-principle-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: var(--q-blue);
+  transition: .3s;
+}
+
+.quality-principle-card:hover::after {
+  width: 100%;
+}
+
+/* JOURNEY */
+
+.quality-journey {
+  padding: 95px 0;
+}
+
+.quality-journey-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 65px;
+  align-items: start;
+}
+
+.quality-journey-heading {
+  position: sticky;
+  top: 120px;
+}
+
+.quality-journey-heading h2 {
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.25;
+  letter-spacing: -1.3px;
+  margin: 0 0 18px;
+}
+
+.quality-journey-heading p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--q-text);
+}
+
+.quality-journey-list {
+  border-left: 2px solid #dceaf7;
+  padding-left: 30px;
+}
+
+.quality-journey-item {
+  position: relative;
+  padding: 0 0 35px;
+}
+
+.quality-journey-item:last-child {
+  padding-bottom: 0;
+}
+
+.quality-journey-item::before {
+  content: "";
+  position: absolute;
+  left: -38px;
+  top: 5px;
+  width: 13px;
+  height: 13px;
+  background: var(--q-blue);
+  border: 4px solid #e5f1fc;
+  border-radius: 50%;
+}
+
+.quality-journey-item span {
+  font-size: 10px;
+  color: var(--q-blue);
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.quality-journey-item h3 {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.quality-journey-item p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--q-text);
+}
 
 /* COMMITMENT */
-.commitment{padding:85px 0;background:var(--light)}
-.commitment-box{
-  background:#fff;border-radius:14px;padding:48px;
-  display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center;
+
+.quality-commitment {
+  padding: 90px 0;
+  background: var(--q-light);
 }
-.commitment-box h2{
-  font-family:Manrope,sans-serif;font-size:35px;
-  line-height:1.3;margin-bottom:17px;
+
+.quality-commitment-box {
+  background: #fff;
+  border: 1px solid var(--q-border);
+  border-radius: 15px;
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
 }
-.commitment-box p{font-size:14px;color:var(--text);line-height:1.9}
-.commitment-points{display:grid;grid-template-columns:1fr 1fr;gap:13px}
-.commitment-item{
-  background:#f2f7fc;border:1px solid #e8f0f8;
-  padding:19px 15px;border-radius:7px;
-  font-size:13px;font-weight:700;color:#24486d;
+
+.quality-commitment-box h2 {
+  font-size: 35px;
+  line-height: 1.3;
+  margin: 0 0 17px;
 }
-.commitment-item span{display:block;color:var(--blue);font-size:19px;margin-bottom:9px}
+
+.quality-commitment-box p {
+  font-size: 14px;
+  color: var(--q-text);
+  line-height: 1.9;
+}
+
+.quality-commitment-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+}
+
+.quality-commitment-item {
+  background: #f2f7fc;
+  border: 1px solid #e8f0f8;
+  padding: 19px 15px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #24486d;
+}
+
+.quality-commitment-item span {
+  display: block;
+  color: var(--q-blue);
+  font-size: 19px;
+  margin-bottom: 9px;
+}
 
 /* CTA */
-.cta{
-  background:linear-gradient(115deg,#073e79,#0871c9);
-  padding:85px 0;text-align:center;color:white;
-}
-.cta .eyebrow{color:#bcdfff}
-.cta h2{font-family:Manrope,sans-serif;font-size:clamp(29px,4vw,43px);margin-bottom:15px}
-.cta p{color:#e0edfc;max-width:650px;margin:auto;font-size:14px;line-height:1.9}
-.cta .btn{background:white;color:var(--blue)}
-.cta .btn:hover{transform:translateY(-3px)}
 
-/* FOOTER */
-footer{background:#102943;color:white;padding:60px 0 22px}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:45px;padding-bottom:35px}
-.footer-brand{font-size:30px;font-weight:800;margin-bottom:15px}
-.footer-brand span{color:#72b8ff}
-footer p,footer a{color:#bdcddd;font-size:13px;line-height:1.9}
-footer h4{font-size:15px;margin-bottom:16px}
-.footer-links{display:flex;flex-direction:column;gap:7px}
-footer a:hover{color:white}
-.footer-bottom{
-  border-top:1px solid #ffffff22;padding-top:20px;
-  display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;
+.quality-cta {
+  padding: 85px 0;
+  background: #f0f6fc;
 }
 
-/* FLOATING WHATSAPP */
-.whatsapp{
-  position:fixed;right:22px;bottom:22px;
-  width:54px;height:54px;background:#20bd65;color:#fff;
-  border-radius:50%;display:flex;align-items:center;
-  justify-content:center;font-size:25px;z-index:100;
-  box-shadow:0 5px 20px #0002;
+.quality-cta-panel {
+  background: #fff;
+  border: 1px solid #e1ebf5;
+  border-radius: 18px;
+  padding: 65px 25px;
+  text-align: center;
+  box-shadow: 0 15px 45px #102d4b08;
 }
 
-/* RESPONSIVE CONTENT */
-@media(max-width:950px){
-  .principle-grid{grid-template-columns:repeat(2,1fr)}
-  .intro-grid,.commitment-box{grid-template-columns:1fr}
-  .journey-grid{grid-template-columns:1fr;gap:35px}
-  .journey-heading{position:static}
+.quality-cta-panel h2 {
+  font-size: clamp(29px, 4vw, 43px);
+  line-height: 1.2;
+  margin: 0 0 16px;
+  color: var(--q-dark);
 }
-@media(max-width:700px){
-  .hero{padding:75px 0}
-  .hero h1{letter-spacing:-1.5px}
-  .intro,.principles,.journey{padding:65px 0}
-  .intro-grid{gap:30px}
-  .principle-grid{grid-template-columns:1fr}
-  .journey-list{padding-left:25px}
-  .journey-item:before{left:-33px}
-  .commitment{padding:60px 0}
-  .commitment-box{padding:28px 22px;gap:28px}
-  .commitment-box h2{font-size:29px}
-  .commitment-points{grid-template-columns:1fr 1fr}
-  .footer-grid{grid-template-columns:1fr;gap:28px}
-  .footer-bottom{flex-direction:column}
+
+.quality-cta-panel p {
+  color: var(--q-text);
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* WHATSAPP BUTTON - PAGE ONLY */
+
+.quality-whatsapp {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 54px;
+  height: 54px;
+  background: #20bd65;
+  color: #fff !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  z-index: 1000;
+  box-shadow: 0 5px 20px #0002;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px) {
+  .quality-principle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quality-intro-grid,
+  .quality-commitment-box {
+    grid-template-columns: 1fr;
+  }
+
+  .quality-journey-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .quality-journey-heading {
+    position: static;
+  }
+}
+
+@media(max-width:700px) {
+  .quality-hero {
+    padding: 75px 0;
+  }
+
+  .quality-hero h1 {
+    letter-spacing: -1.5px;
+  }
+
+  .quality-intro,
+  .quality-principles,
+  .quality-journey {
+    padding: 65px 0;
+  }
+
+  .quality-intro-grid {
+    gap: 30px;
+  }
+
+  .quality-principle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quality-section-heading {
+    margin-bottom: 38px;
+    text-align: left;
+  }
+
+  .quality-section-heading p {
+    margin: 0;
+  }
+
+  .quality-journey-list {
+    padding-left: 25px;
+  }
+
+  .quality-journey-item::before {
+    left: -33px;
+  }
+
+  .quality-commitment {
+    padding: 60px 0;
+  }
+
+  .quality-commitment-box {
+    padding: 28px 22px;
+    gap: 28px;
+  }
+
+  .quality-commitment-box h2 {
+    font-size: 29px;
+  }
+
+  .quality-commitment-points {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .quality-cta {
+    padding: 55px 0;
+  }
+
+  .quality-cta-panel {
+    padding: 45px 20px;
+  }
+}
+
+@media(max-width:420px) {
+  .quality-commitment-points {
+    grid-template-columns: 1fr;
+  }
+
+  .quality-btn {
+    margin-right: 5px;
+    padding: 13px 16px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-
 <header class="site-header premium-header">
   <div class="premium-nav">
 
-    <!-- Logo -->
     <a class="brand" href="index.html" aria-label="Cliva Home">
       <img src="images/cliva-logo.png" alt="Cliva India">
     </a>
 
-    <!-- Mobile Menu -->
-    <button class="menu-toggle" aria-label="Toggle menu"
-      aria-expanded="false">
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
-    <!-- Navigation -->
     <nav class="nav-links">
 
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
 
-      <!-- Products Dropdown -->
       <div class="product-nav">
-        <button class="product-nav-trigger" type="button"
-          aria-expanded="false">
+        <button class="product-nav-trigger" type="button" aria-expanded="false">
           Products <span class="dropdown-arrow">⌄</span>
         </button>
 
@@ -254,8 +595,8 @@ footer a:hover{color:white}
       </div>
 
       <a href="manufacturing.html">Manufacturing</a>
-      <a href="quality.html">Quality</a>
-      <a href="distributor.html">Distribution</a>
+      <a href="quality.html" class="active">Quality</a>
+      <a href="distributor.html">Partner With Us</a>
 
       <a class="nav-cta" href="contact.html">
         Let's Talk <span>↗</span>
@@ -275,252 +616,255 @@ footer a:hover{color:white}
   </div>
 </header>
 
-<main>
+<main class="quality-page">
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <div class="eyebrow">Our Quality Approach</div>
-      <h1>Quality in every detail.<br><span>Care in every step.</span></h1>
-      <p>
-        A thoughtful approach to product quality brings together
-        material review, process monitoring, product checks and
-        careful handling throughout the product journey.
-      </p>
-      <a href="#approach" class="btn btn-primary">Discover Our Approach →</a>
-      <a href="#journey" class="btn btn-outline">Our Quality Process ↓</a>
-    </div>
-  </div>
-</section>
-
-<!-- INTRO -->
-<section class="intro" id="approach">
-  <div class="container intro-grid">
-    <div>
-      <div class="eyebrow">Quality Matters</div>
-      <h2>Built around attention, consistency and care.</h2>
-      <p>
-        Quality is an important consideration throughout a product's
-        journey. From reviewing incoming materials to monitoring
-        relevant production activities and finished product handling,
-        each step requires attention to applicable requirements.
-      </p>
-    </div>
-    <div class="intro-highlight">
-      <h3>A considered approach to quality.</h3>
-      <p>
-        Different product categories require different checks,
-        specifications and handling practices. Our quality overview
-        reflects the importance of considering these requirements
-        at relevant stages of the product journey.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- QUALITY PRINCIPLES -->
-<section class="principles">
-  <div class="container">
-    <div class="section-heading">
-      <div class="eyebrow">Our Focus Areas</div>
-      <h2>Quality Through Every Stage</h2>
-      <p>
-        Key areas that form part of a structured approach to
-        product quality and process management.
-      </p>
-    </div>
-
-    <div class="principle-grid">
-      <article class="principle-card">
-        <div class="principle-number">01</div>
-        <h3>Material Review</h3>
-        <p>Considering incoming materials and packaging inputs against relevant product requirements.</p>
-      </article>
-
-      <article class="principle-card">
-        <div class="principle-number">02</div>
-        <h3>Process Monitoring</h3>
-        <p>Keeping relevant process parameters and production requirements in consideration.</p>
-      </article>
-
-      <article class="principle-card">
-        <div class="principle-number">03</div>
-        <h3>Product Inspection</h3>
-        <p>Reviewing applicable product characteristics and acceptance criteria at relevant stages.</p>
-      </article>
-
-      <article class="principle-card">
-        <div class="principle-number">04</div>
-        <h3>Packaging Review</h3>
-        <p>Considering packaging suitability, product presentation and relevant labelling information.</p>
-      </article>
-
-      <article class="principle-card">
-        <div class="principle-number">05</div>
-        <h3>Storage & Handling</h3>
-        <p>Considering appropriate finished goods storage and handling requirements.</p>
-      </article>
-
-      <article class="principle-card">
-        <div class="principle-number">06</div>
-        <h3>Applicable Standards</h3>
-        <p>Taking relevant product-category requirements and applicable regulations into account.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- QUALITY JOURNEY -->
-<section class="journey" id="journey">
-  <div class="container journey-grid">
-    <div class="journey-heading">
-      <div class="eyebrow">The Quality Journey</div>
-      <h2>Attention from the beginning to the end.</h2>
-      <p>
-        Quality-related considerations can be relevant at multiple
-        points in the product journey. The checks followed depend
-        on the product category and manufacturing arrangement.
-      </p>
-      <a href="manufacturing.html" class="btn btn-primary">Explore Manufacturing →</a>
-    </div>
-
-    <div class="journey-list">
-      <div class="journey-item">
-        <span>STEP 01</span>
-        <h3>Before Production</h3>
-        <p>Reviewing product requirements, material specifications and relevant inputs before production activities.</p>
-      </div>
-
-      <div class="journey-item">
-        <span>STEP 02</span>
-        <h3>During Production</h3>
-        <p>Considering applicable process parameters and monitoring requirements during production.</p>
-      </div>
-
-      <div class="journey-item">
-        <span>STEP 03</span>
-        <h3>Product & Packaging Checks</h3>
-        <p>Reviewing relevant product characteristics, packaging and identification requirements.</p>
-      </div>
-
-      <div class="journey-item">
-        <span>STEP 04</span>
-        <h3>Finished Goods Handling</h3>
-        <p>Considering appropriate storage, handling and dispatch preparation for finished products.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COMMITMENT -->
-<section class="commitment">
-  <div class="container">
-    <div class="commitment-box">
-      <div>
-        <div class="eyebrow">Our Commitment</div>
-        <h2>Making quality a part of the product journey.</h2>
+  <!-- HERO -->
+  <section class="quality-hero">
+    <div class="quality-container">
+      <div class="quality-hero-content">
+        <div class="quality-eyebrow">Our Quality Approach</div>
+        <h1>Quality in every detail.<br><span>Care in every step.</span></h1>
         <p>
-          We recognise that product quality involves more than
-          a single check. It requires attention to relevant
-          specifications, processes, packaging and handling.
-          The applicable requirements may differ across
-          product categories and manufacturing setups.
+          A thoughtful approach to product quality brings together
+          material review, process monitoring, product checks and
+          careful handling throughout the product journey.
         </p>
-        <a href="products.html" class="btn btn-primary">Explore Our Products →</a>
-      </div>
-
-      <div class="commitment-points">
-        <div class="commitment-item"><span>✦</span>Product Requirements</div>
-        <div class="commitment-item"><span>✦</span>Material Considerations</div>
-        <div class="commitment-item"><span>✦</span>Process Monitoring</div>
-        <div class="commitment-item"><span>✦</span>Product Inspection</div>
-        <div class="commitment-item"><span>✦</span>Packaging Review</div>
-        <div class="commitment-item"><span>✦</span>Careful Handling</div>
+        <a href="#approach" class="quality-btn quality-btn-primary">Discover Our Approach →</a>
+        <a href="#journey" class="quality-btn quality-btn-outline">Our Quality Process ↓</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CTA -->
-<section class="cta">
-  <div class="container">
-    <div class="eyebrow">Let's Connect</div>
-    <h2>Have a product or business enquiry?</h2>
-    <p>
-      Connect with the Cliva team to discuss our product
-      categories, requirements and potential business partnerships.
-    </p>
-    <a href="https://wa.me/919870177697?text=Hello%20Cliva%20Team,%20I%20would%20like%20to%20know%20more%20about%20your%20quality%20approach."
-       target="_blank" rel="noopener noreferrer" class="btn">Talk to Our Team →</a>
-  </div>
-</section>
+  <!-- INTRO -->
+  <section class="quality-intro" id="approach">
+    <div class="quality-container quality-intro-grid">
+      <div>
+        <div class="quality-eyebrow">Quality Matters</div>
+        <h2>Built around attention, consistency and care.</h2>
+        <p>
+          Quality is an important consideration throughout a product's
+          journey. From reviewing incoming materials to monitoring
+          relevant production activities and finished product handling,
+          each step requires attention to applicable requirements.
+        </p>
+      </div>
+
+      <div class="quality-highlight">
+        <h3>A considered approach to quality.</h3>
+        <p>
+          Different product categories require different checks,
+          specifications and handling practices. Our quality overview
+          reflects the importance of considering these requirements
+          at relevant stages of the product journey.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUALITY PRINCIPLES -->
+  <section class="quality-principles">
+    <div class="quality-container">
+
+      <div class="quality-section-heading">
+        <div class="quality-eyebrow">Our Quality Pillars</div>
+        <h2>Quality that runs through<br><span>every stage.</span></h2>
+        <p>
+          From materials and process checks to packaging and finished
+          goods handling, each area plays a role in a considered
+          approach to product quality.
+        </p>
+      </div>
+
+      <div class="quality-principle-grid">
+
+        <article class="quality-principle-card">
+          <div class="quality-number">01</div>
+          <h3>Material Review</h3>
+          <p>Considering incoming materials and packaging inputs against relevant product requirements.</p>
+        </article>
+
+        <article class="quality-principle-card">
+          <div class="quality-number">02</div>
+          <h3>Process Monitoring</h3>
+          <p>Keeping relevant process parameters and production requirements in consideration.</p>
+        </article>
+
+        <article class="quality-principle-card">
+          <div class="quality-number">03</div>
+          <h3>Product Inspection</h3>
+          <p>Reviewing applicable product characteristics and acceptance criteria at relevant stages.</p>
+        </article>
+
+        <article class="quality-principle-card">
+          <div class="quality-number">04</div>
+          <h3>Packaging Review</h3>
+          <p>Considering packaging suitability, product presentation and relevant labelling information.</p>
+        </article>
+
+        <article class="quality-principle-card">
+          <div class="quality-number">05</div>
+          <h3>Storage & Handling</h3>
+          <p>Considering appropriate finished goods storage and handling requirements.</p>
+        </article>
+
+        <article class="quality-principle-card">
+          <div class="quality-number">06</div>
+          <h3>Applicable Standards</h3>
+          <p>Taking relevant product-category requirements and applicable regulations into account.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUALITY JOURNEY -->
+  <section class="quality-journey" id="journey">
+    <div class="quality-container quality-journey-grid">
+
+      <div class="quality-journey-heading">
+        <div class="quality-eyebrow">The Quality Journey</div>
+        <h2>Attention from the beginning to the end.</h2>
+        <p>
+          Quality-related considerations can be relevant at multiple
+          points in the product journey. The checks followed depend
+          on the product category and manufacturing arrangement.
+        </p>
+        <a href="manufacturing.html" class="quality-btn quality-btn-primary">Explore Manufacturing →</a>
+      </div>
+
+      <div class="quality-journey-list">
+
+        <div class="quality-journey-item">
+          <span>STEP 01</span>
+          <h3>Before Production</h3>
+          <p>Reviewing product requirements, material specifications and relevant inputs before production activities.</p>
+        </div>
+
+        <div class="quality-journey-item">
+          <span>STEP 02</span>
+          <h3>During Production</h3>
+          <p>Considering applicable process parameters and monitoring requirements during production.</p>
+        </div>
+
+        <div class="quality-journey-item">
+          <span>STEP 03</span>
+          <h3>Product & Packaging Checks</h3>
+          <p>Reviewing relevant product characteristics, packaging and identification requirements.</p>
+        </div>
+
+        <div class="quality-journey-item">
+          <span>STEP 04</span>
+          <h3>Finished Goods Handling</h3>
+          <p>Considering appropriate storage, handling and dispatch preparation for finished products.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMITMENT -->
+  <section class="quality-commitment">
+    <div class="quality-container">
+      <div class="quality-commitment-box">
+
+        <div>
+          <div class="quality-eyebrow">Our Commitment</div>
+          <h2>Making quality a part of the product journey.</h2>
+          <p>
+            We recognise that product quality involves more than
+            a single check. It requires attention to relevant
+            specifications, processes, packaging and handling.
+            The applicable requirements may differ across
+            product categories and manufacturing setups.
+          </p>
+          <a href="products.html" class="quality-btn quality-btn-primary">Explore Our Products →</a>
+        </div>
+
+        <div class="quality-commitment-points">
+          <div class="quality-commitment-item"><span>✦</span>Product Requirements</div>
+          <div class="quality-commitment-item"><span>✦</span>Material Considerations</div>
+          <div class="quality-commitment-item"><span>✦</span>Process Monitoring</div>
+          <div class="quality-commitment-item"><span>✦</span>Product Inspection</div>
+          <div class="quality-commitment-item"><span>✦</span>Packaging Review</div>
+          <div class="quality-commitment-item"><span>✦</span>Careful Handling</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="quality-cta">
+    <div class="quality-container">
+      <div class="quality-cta-panel">
+        <div class="quality-eyebrow">Let's Connect</div>
+        <h2>Have a product or business enquiry?</h2>
+        <p>
+          Connect with the Cliva team to discuss our product
+          categories, requirements and potential business partnerships.
+        </p>
+        <a href="https://wa.me/919870177697?text=Hello%20Cliva%20Team,%20I%20would%20like%20to%20know%20more%20about%20your%20quality%20approach."
+           target="_blank" rel="noopener noreferrer"
+           class="quality-btn quality-btn-primary">
+          Talk to Our Team →
+        </a>
+      </div>
+    </div>
+  </section>
 
 </main>
 
-<!-- FOOTER -->
+<!-- ORIGINAL CLIVA FOOTER - PRESERVED -->
 <footer class="site-footer">
   <div class="container">
 
-    
-<div class="footer-main">
+    <div class="footer-main">
 
-  <!-- CLIVA LOGO ONLY -->
-  <div class="footer-about">
-    <a class="footer-logo" href="index.html">
-      <img src="images/cliva-logo.png" alt="Cliva India">
-    </a>
-  </div>
+      <div class="footer-about">
+        <a class="footer-logo" href="index.html">
+          <img src="images/cliva-logo.png" alt="Cliva India">
+        </a>
+      </div>
 
-  <!-- EXPLORE -->
-  <div class="footer-column">
-    <h4>Explore</h4>
-    <a href="about.html">About Us</a>
-    <a href="products.html">Products</a>
-    <a href="manufacturing.html">Manufacturing</a>
-    <a href="quality.html">Quality</a>
-    <a href="distributor.html">Distribution</a>
-  </div>
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="manufacturing.html">Manufacturing</a>
+        <a href="quality.html">Quality</a>
+        <a href="distributor.html">Partner With Us</a>
+      </div>
 
-  <!-- QUICK LINKS -->
-  <div class="footer-column">
-    <h4>Quick Links</h4>
-    <a href="contact.html">Contact Us</a>
-    <a href="distributor.html">Partner With Us</a>
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <a href="terms-conditions.html">Terms & Conditions</a>
-  </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="distributor.html">Partner With Us</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-conditions.html">Terms & Conditions</a>
+      </div>
 
-  <!-- GET IN TOUCH -->
-  <div class="footer-column footer-contact">
-    <h4>Get in Touch</h4>
-    <a href="mailto:sales@clivaindia.com">sales@clivaindia.com</a>
-    <a href="tel:+919870177697">+91 98701 77697</a>
-    <p>Gurugram, Haryana 122001, India</p>
-  </div>
+      <div class="footer-column footer-contact">
+        <h4>Get in Touch</h4>
+        <a href="mailto:sales@clivaindia.com">sales@clivaindia.com</a>
+        <a href="tel:+919870177697">+91 98701 77697</a>
+        <p>Gurugram, Haryana 122001, India</p>
+      </div>
 
-  <!-- FOLLOW US -->
-  <div class="footer-column footer-social-column">
-    <h4>Follow Us</h4>
-    <div class="footer-socials">
-      <a class="facebook" href="YOUR_FACEBOOK_URL" aria-label="Facebook">f</a>
-      <a class="instagram" href="YOUR_INSTAGRAM_URL" aria-label="Instagram">◎</a>
-      <a class="whatsapp" href="https://wa.me/919870177697" aria-label="WhatsApp">◔</a>
-      <a class="linkedin" href="YOUR_LINKEDIN_URL" aria-label="LinkedIn">in</a>
-      <a class="twitter" href="#" aria-label="X">𝕏</a>
-    </div>
-  </div>
-
-</div>
-
+      <div class="footer-column footer-social-column">
+        <h4>Follow Us</h4>
+        <div class="footer-socials">
+          <a class="facebook" href="YOUR_FACEBOOK_URL" aria-label="Facebook">f</a>
+          <a class="instagram" href="YOUR_INSTAGRAM_URL" aria-label="Instagram">◎</a>
+          <a class="whatsapp" href="https://wa.me/919870177697" aria-label="WhatsApp">◔</a>
+          <a class="linkedin" href="YOUR_LINKEDIN_URL" aria-label="LinkedIn">in</a>
+          <a class="twitter" href="#" aria-label="X">𝕏</a>
+        </div>
       </div>
 
     </div>
 
-    <!-- GIANT CLIVA WATERMARK -->
     <div class="footer-watermark">CLIVA</div>
 
-    <!-- COPYRIGHT -->
     <div class="footer-bottom">
       <span>© 2026 Cliva India Pvt. Ltd. All Rights Reserved.</span>
       <div>
@@ -532,13 +876,12 @@ footer a:hover{color:white}
   </div>
 </footer>
 
-<a class="whatsapp"
+<a class="quality-whatsapp"
    href="https://wa.me/919870177697"
    target="_blank"
    rel="noopener noreferrer"
    aria-label="WhatsApp">✆</a>
 
-<!-- MOBILE MENU -->
 <script>
 const menuButton = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".nav-links");
@@ -554,6 +897,16 @@ if (menuButton && navigation) {
       navigation.classList.remove("is-open");
       menuButton.setAttribute("aria-expanded", "false");
     });
+  });
+}
+
+const productTrigger = document.querySelector(".product-nav-trigger");
+
+if (productTrigger) {
+  productTrigger.addEventListener("click", () => {
+    const productNav = productTrigger.closest(".product-nav");
+    const isOpen = productNav.classList.toggle("is-open");
+    productTrigger.setAttribute("aria-expanded", String(isOpen));
   });
 }
 </script>
