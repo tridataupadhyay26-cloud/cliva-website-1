@@ -1401,69 +1401,35 @@ h1, h2, h3, h4 {
   }
 }
 
-/* FULL PRODUCT IMAGE BACKGROUND */
-.hero {
+/* CLIVA BANNER ON ALL INNER PAGES */
+
+body:not(.home-page) .hero {
   position: relative;
   overflow: hidden;
+
   background-image:
     linear-gradient(
       90deg,
-      rgba(248, 248, 237, 0.98) 0%,
-      rgba(248, 248, 237, 0.90) 38%,
-      rgba(248, 248, 237, 0.18) 100%
+      rgba(248, 248, 237, 0.94) 0%,
+      rgba(248, 248, 237, 0.78) 38%,
+      rgba(248, 248, 237, 0.15) 100%
     ),
-    url("images/cliva-products-banner.png");
+    url("../images/cliva-products-banner.png");
+
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
 }
 
-/* Remove old product illustration */
-.hero-art {
-  display: none !important;
-}
-
-/* Keep the heading and buttons visible */
-.hero-layout {
+body:not(.home-page) .hero-layout {
   position: relative;
   z-index: 2;
 }
 
 @media (max-width: 820px) {
-  .hero {
+  body:not(.home-page) .hero {
     background-position: center;
   }
-}
-
-/* FIX: SHOW CLIVA PRODUCT BACKGROUND */
-.hero {
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(248, 248, 237, 0.92) 0%,
-      rgba(248, 248, 237, 0.72) 42%,
-      rgba(248, 248, 237, 0.12) 100%
-    ),
-    url("../images/cliva-products-banner.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Hide old decorative boxes only */
-.hero-art {
-  display: none !important;
-}
-
-.hero-bottom {
-  margin-top: 40px;
-  position: relative;
-  z-index: 5;
-}
-
-.hero-bottom-inner {
-  padding-top: 15px;
-  padding-bottom: 15px;
 }
 
 /* PREMIUM WELCOME SECTION */
@@ -1887,51 +1853,54 @@ h1, h2, h3, h4 {
   transform: translateY(-3px);
 }
 
-/* Business opportunity cards */
+
+/* PREMIUM MINIMAL BUSINESS OPPORTUNITIES */
+
 .grow-cards {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid rgba(255, 255, 255, 0.19);
+  border-top: 1px solid rgba(255,255,255,0.22);
 }
 
 .grow-card {
   display: grid;
-  grid-template-columns: 38px 1fr 38px;
+  grid-template-columns: 42px 1fr 25px;
   align-items: center;
-  gap: 15px;
-  padding: 27px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.19);
+  gap: 18px;
+  padding: 25px 5px;
+  border-bottom: 1px solid rgba(255,255,255,0.22);
   color: #fff;
   text-decoration: none;
-  transition: padding .25s ease, background .25s ease;
+  background: transparent;
+  transition: padding 0.3s ease;
 }
 
 .grow-card:hover {
-  padding-left: 10px;
-  padding-right: 10px;
-  background: rgba(255, 255, 255, 0.045);
+  padding-left: 13px;
+  background: transparent;
 }
 
 .grow-number {
   align-self: start;
   padding-top: 4px;
   color: #b9d49f;
-  font-size: 11px;
-  font-weight: 750;
+  font-size: 12px;
+  font-weight: 700;
   letter-spacing: 1px;
 }
 
 .grow-card-content h3 {
-  margin: 0 0 8px;
-  font-size: 17px;
-  font-weight: 650;
+  margin: 0 0 7px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
   line-height: 1.4;
 }
 
 .grow-card-content p {
   margin: 0;
-  color: #c5d3c7;
-  font-size: 12px;
+  color: #d0dbd0;
+  font-size: 13px;
   line-height: 1.6;
 }
 
@@ -1939,20 +1908,39 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 37px;
-  height: 37px;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 50%;
-  color: #d4e5c6;
-  font-size: 18px;
-  transition: .25s ease;
+  width: auto;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: #b9d49f;
+  font-size: 22px;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .grow-card:hover .grow-arrow {
-  background: #d6e5c8;
-  border-color: #d6e5c8;
-  color: #193e2b;
+  background: transparent;
+  border: none;
+  color: #fff;
+  transform: translate(4px, -4px);
 }
+
+@media (max-width: 500px) {
+  .grow-card {
+    grid-template-columns: 30px 1fr 22px;
+    gap: 12px;
+    padding: 22px 0;
+  }
+
+  .grow-card-content h3 {
+    font-size: 16px;
+  }
+
+  .grow-card-content p {
+    font-size: 12px;
+  }
+}
+
 
 /* Bottom signature line */
 .grow-footer {
@@ -2623,7 +2611,167 @@ a {
 a:hover {
   color: var(--primary-blue);
 }
+.cta {
+  background: linear-gradient(135deg, #FFFFFF 0%, #EAF3FC 100%);
+  padding: 75px 30px;
+  border: 1px solid #DCE8F2;
+  border-radius: 24px;
+  margin: 70px auto;
+  text-align: center;
+  box-shadow: 0 12px 35px rgba(18, 63, 112, 0.06);
+}
 
+.cta h2 {
+  color: #123F70;
+}
+
+.cta p {
+  color: #64748B;
+}
+
+.cta a {
+  background: #123F70;
+  color: #FFFFFF;
+  border-radius: 50px;
+  padding: 15px 30px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.cta a:hover {
+  background: #1688D4;
+  transform: translateY(-3px);
+}.cta {
+  background: linear-gradient(135deg, #FFFFFF 0%, #EAF3FC 100%);
+  padding: 75px 30px;
+  border: 1px solid #DCE8F2;
+  border-radius: 24px;
+  margin: 70px auto;
+  text-align: center;
+  box-shadow: 0 12px 35px rgba(18, 63, 112, 0.06);
+}
+
+.cta h2 {
+  color: #123F70;
+}
+
+.cta p {
+  color: #64748B;
+}
+
+.cta a {
+  background: #123F70;
+  color: #FFFFFF;
+  border-radius: 50px;
+  padding: 15px 30px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.cta a:hover {
+  background: #1688D4;
+  transform: translateY(-3px);
+}.cta {
+  background: linear-gradient(135deg, #FFFFFF 0%, #EAF3FC 100%);
+  padding: 75px 30px;
+  border: 1px solid #DCE8F2;
+  border-radius: 24px;
+  margin: 70px auto;
+  text-align: center;
+  box-shadow: 0 12px 35px rgba(18, 63, 112, 0.06);
+}
+
+.cta h2 {
+  color: #123F70;
+}
+
+.cta p {
+  color: #64748B;
+}
+
+.cta a {
+  background: #123F70;
+  color: #FFFFFF;
+  border-radius: 50px;
+  padding: 15px 30px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.cta a:hover {
+  background: #1688D4;
+  transform: translateY(-3px);
+}.cta {
+  background: linear-gradient(135deg, #FFFFFF 0%, #EAF3FC 100%);
+  padding: 75px 30px;
+  border: 1px solid #DCE8F2;
+  border-radius: 24px;
+  margin: 70px auto;
+  text-align: center;
+  box-shadow: 0 12px 35px rgba(18, 63, 112, 0.06);
+}
+
+.cta h2 {
+  color: #123F70;
+}
+
+.cta p {
+  color: #64748B;
+}
+
+.cta a {
+  background: #123F70;
+  color: #FFFFFF;
+  border-radius: 50px;
+  padding: 15px 30px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.cta a:hover {
+  background: #1688D4;
+  transform: translateY(-3px);
+}.cta {
+  background: linear-gradient(135deg, #FFFFFF 0%, #EAF3FC 100%);
+  padding: 75px 30px;
+  border: 1px solid #DCE8F2;
+  border-radius: 24px;
+  margin: 70px auto;
+  text-align: center;
+  box-shadow: 0 12px 35px rgba(18, 63, 112, 0.06);
+}
+
+.cta h2 {
+  color: #123F70;
+}
+
+.cta p {
+  color: #64748B;
+}
+
+.cta a {
+  background: #123F70;
+  color: #FFFFFF;
+  border-radius: 50px;
+  padding: 15px 30px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.cta a:hover {
+  background: #1688D4;
+  transform: translateY(-3px);
+}
 /* FOOTER */
 footer,
 .site-footer {
@@ -3780,17 +3928,20 @@ header {
         rgba(255,255,255,0.98)
     ) !important;
 }
-/* Refined Cliva Header */
+/* Refined Cliva Header - Border Removed */
 .premium-header {
-    background: #ffffff !important;
-    border: 1px solid #e7eff8 !important;
-    border-radius: 12px !important;
+   background: #ffffff !important;
+   border: none !important;
+   outline: none !important;
+   border-radius: 12px !important;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+   backdrop-filter: none !important;
+}
 
-    box-shadow:
-        0 3px 12px rgba(40, 100, 170, 0.07),
-        inset 0 -2px 5px rgba(190, 220, 250, 0.12) !important;
-
-    backdrop-filter: none !important;
+.premium-nav {
+   background: #ffffff !important;
+   border: none !important;
+   box-shadow: none !important;
 }
 
 .premium-nav {
@@ -4360,23 +4511,6 @@ header {
 .hero a[href="/contact.html"]:hover {
   background: #EAF5FC !important;
   color: #123F70 !important;
-}
-
-
-
-/* Cliva Premium Header - Complete Blue Outline */
-
-.premium-header {
-  border: none !important;
-  background: transparent !important;
-}
-
-.premium-header .premium-nav {
-  background: #ffffff !important;
-  border: 3px solid #174B8C !important;
-  border-radius: 24px !important;
-  box-sizing: border-box !important;
-  box-shadow: 0 5px 18px rgba(23, 75, 140, 0.10);
 }
 
 /* Giant CLIVA Footer Watermark */
@@ -5298,5 +5432,868 @@ h4 {
     margin: 10px 0 4px;
     border-radius: 50% !important;
     justify-content: center;
+  }
+}
+/* =================================
+   CLIVA PREMIUM CENTER CAROUSEL
+================================= */
+
+.cliva-carousel-section {
+  width: 100%;
+  padding: 55px 0 45px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.cliva-carousel-heading {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0 15px;
+}
+
+.cliva-carousel-heading h2 {
+  font-size: clamp(27px, 3.2vw, 43px);
+  font-weight: 800;
+  color: #153b68;
+  margin: 0 0 12px;
+}
+
+.cliva-carousel-heading h2 span {
+  color: #388bd5;
+}
+
+.cliva-carousel-heading p {
+  color: #71839b;
+  font-size: 15px;
+  margin: 0;
+}
+
+.cliva-carousel {
+  width: 100%;
+  max-width: 1150px;
+  position: relative;
+  margin: auto;
+  padding: 10px 0 45px;
+}
+
+.cliva-carousel-viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.cliva-carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  transition: transform .65s cubic-bezier(.22,.61,.36,1);
+  will-change: transform;
+}
+
+.cliva-carousel-slide {
+  flex: 0 0 58%;
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .55;
+  transform: scale(.78);
+  transition: transform .65s ease, opacity .65s ease;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible;
+}
+
+.cliva-carousel-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.cliva-carousel-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.cliva-carousel-arrow {
+  position: absolute;
+  top: 43%;
+  z-index: 5;
+  width: 43px;
+  height: 43px;
+  border: 1px solid #dce6ef;
+  border-radius: 50%;
+  background: #fff;
+  color: #153b68;
+  font-size: 23px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .25s ease;
+}
+
+.cliva-carousel-arrow:hover {
+  background: #153b68;
+  color: #fff;
+}
+
+.cliva-carousel-arrow.prev {
+  left: 4%;
+}
+
+.cliva-carousel-arrow.next {
+  right: 4%;
+}
+
+.cliva-carousel-dots {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+}
+
+.cliva-carousel-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background: #cbd6df;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.cliva-carousel-dot.active {
+  width: 23px;
+  background: #287fc5;
+}
+
+@media (max-width: 768px) {
+  .cliva-carousel-section {
+    padding: 40px 0 35px;
+  }
+
+  .cliva-carousel-slide {
+    flex-basis: 78%;
+    transform: scale(.82);
+  }
+
+  .cliva-carousel-slide.active {
+    transform: scale(1);
+  }
+
+  .cliva-carousel-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 19px;
+  }
+
+  .cliva-carousel-arrow.prev {
+    left: 2%;
+  }
+
+  .cliva-carousel-arrow.next {
+    right: 2%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cliva-carousel-heading h2 {
+    font-size: 27px;
+  }
+
+  .cliva-carousel-heading p {
+    font-size: 13px;
+  }
+
+  .cliva-carousel-slide {
+    flex-basis: 84%;
+  }
+}
+/* =================================
+   CLIVA CAROUSEL FINAL FIX
+================================= */
+
+.cliva-carousel {
+  max-width: 1250px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.cliva-carousel-viewport {
+  overflow: hidden;
+  padding: 12px 0;
+}
+
+.cliva-carousel-track {
+  gap: 0 !important;
+  align-items: center;
+}
+
+.cliva-carousel-slide {
+  flex: 0 0 58% !important;
+  aspect-ratio: 16 / 9;
+  overflow: hidden !important;
+  border-radius: 22px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  opacity: .65;
+  transform: scale(.80);
+}
+
+.cliva-carousel-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.cliva-carousel-slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain !important;
+  border-radius: 22px !important;
+  overflow: hidden;
+  box-shadow: none !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .cliva-carousel-slide {
+    flex-basis: 78% !important;
+    border-radius: 16px !important;
+  }
+
+  .cliva-carousel-slide img {
+    border-radius: 16px !important;
+  }
+}
+/* Carousel track positioning fix */
+.cliva-carousel-track {
+  position: relative;
+}
+/* CLIVA HERO VIDEO - ROUNDED BOX */
+.hero-bg-video {
+    position: absolute !important;
+    width: 88% !important;
+    height: 85% !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    object-fit: cover !important;
+    border-radius: 28px !important;
+    overflow: hidden !important;
+    z-index: 0;
+}
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    border-radius: 28px;
+}
+/* Remove old hero background image */
+.hero-section {
+    background-image: none !important;
+    background-color: #ffffff !important;
+}
+
+.hero-section::before {
+    background-image: none !important;
+}
+/* HOMEPAGE HERO - REMOVE OLD BACKGROUND IMAGE */
+body:has(.hero) .hero {
+    background-image: none !important;
+    background-color: #ffffff !important;
+}
+
+body:has(.hero) .hero::before,
+body:has(.hero) .hero::after {
+    background-image: none !important;
+}
+
+body:has(.hero) .hero-art {
+    background-image: none !important;
+}
+/* HOMEPAGE HERO BACKGROUND WHITE */
+body:has(.hero) .hero {
+    background: #ffffff !important;
+    background-image: none !important;
+}
+
+body:has(.hero) .hero-video-overlay {
+    background: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* REMOVE ALL BOX STYLING FROM GROW OPTIONS */
+
+.grow-cards,
+.grow-card,
+.grow-card-content,
+.grow-arrow {
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.grow-cards {
+  border: none !important;
+  border-top: 1px solid rgba(255,255,255,0.28) !important;
+}
+
+.grow-card {
+  display: grid !important;
+  grid-template-columns: 45px 1fr 25px !important;
+  gap: 18px !important;
+  padding: 27px 0 !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(255,255,255,0.25) !important;
+  border-radius: 0 !important;
+  transform: none !important;
+}
+
+.grow-card:hover {
+  padding-left: 8px !important;
+  padding-right: 0 !important;
+  background: transparent !important;
+}
+
+.grow-number {
+  color: #b9d49f !important;
+  font-size: 12px !important;
+}
+
+.grow-card-content h3 {
+  color: #ffffff !important;
+  font-size: 19px !important;
+  font-weight: 600 !important;
+  margin-bottom: 8px !important;
+}
+
+.grow-card-content p {
+  color: #d0dbd0 !important;
+  font-size: 13px !important;
+}
+
+.grow-arrow {
+  width: auto !important;
+  height: auto !important;
+  border: none !important;
+  border-radius: 0 !important;
+  font-size: 22px !important;
+  color: #b9d49f !important;
+}
+
+.grow-card:hover .grow-arrow {
+  background: transparent !important;
+  border: none !important;
+  transform: translate(4px,-4px) !important;
+  color: #ffffff !important;
+}
+
+/* CLIVA HOMEPAGE - PREMIUM CONTACT LINKS */
+
+.contact-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: transparent !important;
+}
+
+.contact-link {
+  display: grid;
+  grid-template-columns: 45px 1fr 45px;
+  align-items: center;
+  gap: 18px;
+  padding: 32px 12px;
+  text-decoration: none !important;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(255,255,255,0.22) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transition: all 0.35s ease;
+}
+
+.contact-link:first-child {
+  border-top: 1px solid rgba(255,255,255,0.22) !important;
+}
+
+.contact-number {
+  color: #a9d5f0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.contact-link-content h3 {
+  color: #ffffff !important;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 9px;
+}
+
+.contact-link-content p {
+  color: #c1d9eb !important;
+  font-size: 15px;
+  margin: 0;
+}
+
+.contact-arrow {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  transition: 0.35s ease;
+}
+
+.contact-link:hover {
+  padding-left: 22px;
+  background: rgba(255,255,255,0.04) !important;
+}
+
+.contact-link:hover .contact-arrow {
+  background: white;
+  color: #17436b;
+  transform: rotate(45deg);
+}
+
+@media(max-width:768px) {
+  .contact-link {
+    grid-template-columns: 30px 1fr 35px;
+    gap: 10px;
+    padding: 24px 5px;
+  }
+
+  .contact-link-content h3 {
+    font-size: 17px;
+  }
+
+  .contact-link-content p {
+    font-size: 13px;
+  }
+
+  .contact-arrow {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* RESTORE BACKGROUNDS ON ALL OTHER PAGES */
+body:not(:has(.hero)) {
+  background-image: initial;
+}
+
+/* HOMEPAGE HERO ONLY */
+body:has(.hero) .hero {
+  background-color: #ffffff !important;
+  background-image: none !important;
+}
+
+/* HOMEPAGE HERO BACKGROUND IMAGE */
+body:has(.hero) .hero {
+  background-image: url("../images/cliva-products-banner.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-color: #ffffff !important;
+}
+
+/* WHITE BACKGROUND - HOMEPAGE ONLY */
+
+.home-page .hero {
+  background-color: #ffffff !important;
+  background-image: none !important;
+}
+
+.home-page .hero::before,
+.home-page .hero::after {
+  background-image: none !important;
+}
+
+/* HOMEPAGE ONLY - REMOVE BACKGROUND IMAGE */
+
+body.home-page .hero,
+body.home-page .hero::before,
+body.home-page .hero::after,
+body.home-page .hero-art,
+body.home-page .hero-product-image {
+  background-image: none !important;
+  background-color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+/* =========================================
+   CLIVA - LIVE MANUFACTURING JOURNEY
+========================================= */
+
+.process-section {
+  padding: 95px 0;
+  background: #f8fbff;
+  overflow: hidden;
+}
+
+/* HEADING */
+
+.process-section .section-heading {
+  max-width: 760px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.process-section .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #1688d4;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.process-section .eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 2px;
+  background: #1688d4;
+}
+
+.process-section .section-heading h2 {
+  color: #123f70;
+  font-size: clamp(30px, 3.5vw, 42px);
+  line-height: 1.2;
+  letter-spacing: -1px;
+  margin: 0 0 16px;
+}
+
+.process-section .section-heading p {
+  max-width: 610px;
+  margin: 0 auto;
+  color: #718096;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* STAGE GRID */
+
+.process-section .stage-grid {
+  max-width: 1120px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 55px;
+  row-gap: 0;
+}
+
+/* STAGE CARD */
+
+.process-section .stage-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  align-content: start;
+  padding: 27px 22px;
+  margin-bottom: 12px;
+  border: 1px solid #e3edf7 !important;
+  border-radius: 14px !important;
+  background: #ffffff !important;
+  box-shadow: 0 5px 20px rgba(18, 63, 112, 0.035) !important;
+  transition: border-color .35s ease, box-shadow .35s ease;
+  animation: stageRunning 9.9s infinite;
+}
+
+/* RUNNING HIGHLIGHT */
+
+.process-section .stage-card::after {
+  content: "➜";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1688d4;
+  font-size: 21px;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+/* STAGE NUMBER */
+
+.process-section .stage-top {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  display: flex;
+  align-items: flex-start;
+}
+
+.process-section .stage-no {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 42px;
+  border-radius: 9px;
+  background: #edf6ff;
+  color: #1688d4;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+
+/* STAGE CONTENT */
+
+.process-section .stage-card h3 {
+  grid-column: 2;
+  margin: 0 0 9px;
+  padding-right: 25px;
+  color: #123f70;
+  font-size: 18px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.process-section .stage-card p {
+  grid-column: 2;
+  margin: 0;
+  padding-right: 20px;
+  color: #718096;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.process-section .stage-line {
+  display: none;
+}
+
+/* EACH STAGE ACTIVATES IN SEQUENCE */
+
+.process-section .stage-card:nth-child(1)  { animation-delay: 0s; }
+.process-section .stage-card:nth-child(2)  { animation-delay: .9s; }
+.process-section .stage-card:nth-child(3)  { animation-delay: 1.8s; }
+.process-section .stage-card:nth-child(4)  { animation-delay: 2.7s; }
+.process-section .stage-card:nth-child(5)  { animation-delay: 3.6s; }
+.process-section .stage-card:nth-child(6)  { animation-delay: 4.5s; }
+.process-section .stage-card:nth-child(7)  { animation-delay: 5.4s; }
+.process-section .stage-card:nth-child(8)  { animation-delay: 6.3s; }
+.process-section .stage-card:nth-child(9)  { animation-delay: 7.2s; }
+.process-section .stage-card:nth-child(10) { animation-delay: 8.1s; }
+.process-section .stage-card:nth-child(11) { animation-delay: 9s; }
+
+/* ANIMATION */
+
+@keyframes stageRunning {
+  0%, 8% {
+    border-color: #1688d4 !important;
+    box-shadow: 0 8px 28px rgba(22, 136, 212, .18);
+    background: #f0f8ff !important;
+  }
+
+  9%, 100% {
+    border-color: #e3edf7;
+    box-shadow: 0 5px 20px rgba(18, 63, 112, .035);
+    background: #ffffff;
+  }
+}
+
+.process-section .stage-card:nth-child(1)::after,
+.process-section .stage-card:nth-child(2)::after,
+.process-section .stage-card:nth-child(3)::after,
+.process-section .stage-card:nth-child(4)::after,
+.process-section .stage-card:nth-child(5)::after,
+.process-section .stage-card:nth-child(6)::after,
+.process-section .stage-card:nth-child(7)::after,
+.process-section .stage-card:nth-child(8)::after,
+.process-section .stage-card:nth-child(9)::after,
+.process-section .stage-card:nth-child(10)::after,
+.process-section .stage-card:nth-child(11)::after {
+  animation: arrowRunning 9.9s infinite;
+}
+
+.process-section .stage-card:nth-child(1)::after  { animation-delay: 0s; }
+.process-section .stage-card:nth-child(2)::after  { animation-delay: .9s; }
+.process-section .stage-card:nth-child(3)::after  { animation-delay: 1.8s; }
+.process-section .stage-card:nth-child(4)::after  { animation-delay: 2.7s; }
+.process-section .stage-card:nth-child(5)::after  { animation-delay: 3.6s; }
+.process-section .stage-card:nth-child(6)::after  { animation-delay: 4.5s; }
+.process-section .stage-card:nth-child(7)::after  { animation-delay: 5.4s; }
+.process-section .stage-card:nth-child(8)::after  { animation-delay: 6.3s; }
+.process-section .stage-card:nth-child(9)::after  { animation-delay: 7.2s; }
+.process-section .stage-card:nth-child(10)::after { animation-delay: 8.1s; }
+.process-section .stage-card:nth-child(11)::after { animation-delay: 9s; }
+
+@keyframes arrowRunning {
+  0%, 8% { opacity: 1; }
+  9%, 100% { opacity: 0; }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .process-section {
+    padding: 65px 0;
+  }
+
+  .process-section .section-heading {
+    margin-bottom: 35px;
+    padding: 0 15px;
+  }
+
+  .process-section .section-heading h2 {
+    font-size: 30px;
+  }
+
+  .process-section .stage-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0 14px;
+  }
+
+  .process-section .stage-card {
+    grid-template-columns: 72px 1fr;
+    padding: 22px 15px;
+    margin-bottom: 10px;
+  }
+
+  .process-section .stage-no {
+    width: 55px;
+    height: 38px;
+    font-size: 11px;
+  }
+
+  .process-section .stage-card h3 {
+    font-size: 16px;
+  }
+
+  .process-section .stage-card p {
+    font-size: 12px;
+  }
+}
+/* =================================
+   CONTACT PAGE - PREMIUM CTA
+================================= */
+
+.contact-cta {
+  padding: 85px 24px;
+  background: #f3f7fc;
+}
+
+.contact-cta-inner {
+  position: relative;
+  overflow: hidden;
+  max-width: 1100px;
+  margin: auto;
+  padding: 65px 30px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e2ebf5;
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(16, 45, 75, 0.05);
+}
+
+.contact-cta-inner::before,
+.contact-cta-inner::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(8, 116, 201, 0.10);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.contact-cta-inner::before {
+  width: 260px;
+  height: 260px;
+  top: -190px;
+  right: -70px;
+}
+
+.contact-cta-inner::after {
+  width: 200px;
+  height: 200px;
+  bottom: -155px;
+  left: -65px;
+}
+
+.contact-cta-label {
+  position: relative;
+  z-index: 1;
+  color: #0874c9;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  margin-bottom: 18px;
+}
+
+.contact-cta h2 {
+  position: relative;
+  z-index: 1;
+  color: #102d4b;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+  margin: 0 0 14px;
+}
+
+.contact-cta p {
+  position: relative;
+  z-index: 1;
+  max-width: 550px;
+  margin: 0 auto;
+  color: #718096;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.contact-cta-button {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 27px;
+  padding: 15px 25px;
+  background: #0874c9;
+  color: #ffffff !important;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: .3s ease;
+}
+
+.contact-cta-button:hover {
+  background: #0755a5;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+  .contact-cta {
+    padding: 55px 16px;
+  }
+
+  .contact-cta-inner {
+    padding: 48px 20px;
+  }
+
+  .contact-cta p {
+    font-size: 13px;
   }
 }
